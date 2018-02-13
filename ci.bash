@@ -5,7 +5,7 @@ function build-docs () {
     echo "Building the documentation"
     mkdir /tmp/site
     cd /tmp/site
-    git clone https://github.com/absa-subatomic/subatomic-documentation.git .
+    git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/absa-subatomic/subatomic-documentation.git .
     git checkout gh-pages
     cd -
     mkdocs build --strict -d /tmp/site
