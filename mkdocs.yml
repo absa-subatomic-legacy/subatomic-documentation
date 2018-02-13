@@ -11,7 +11,7 @@ theme:
     primary: 'red'
     accent: 'red'
 
-docs_dir: sources
+docs_dir: docs
 google_analytics:
   - UA-107338053-1
   - auto
