@@ -13,8 +13,6 @@ install:
 deploy:
   provider: pages
   skip-cleanup: true
-  email: kieran.bester@gmail.com
-  name: KieranHons
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
