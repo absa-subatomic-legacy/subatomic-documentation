@@ -17,26 +17,6 @@ google_analytics:
   - auto
 repo_name: absa-subatomic
 repo_url: https://github.com/absa-subatomic/subatomic-documentation
-markdown_extensions:
-  - markdown_include.include:
-      base_path: "sources/shared"
-  - admonition
-  - codehilite(guess_lang=false, linenums=false)
-  - def_list
-  - footnotes
-  - meta
-  - smarty
-  - toc(permalink=true)
-  - pymdownx.betterem(smart_enable=all)
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist(custom_checkbox=true)
-  - pymdownx.tilde
 extra:
   palette:
     primary: blue-grey
@@ -46,34 +26,4 @@ extra:
       link: https://github.com/absa-subatomic
 pages:
 - Home: index.md
-- New to Chaos Engineering: new-to-chaos.md
-- Getting Started with the Tutorials: getting-started.md
-- Explore Specific Use Cases: explore-specific-cases.md
-- Explore Third Party and Commercial Integrations: integrations.md
-- Contributing to the Chaos Toolkit: contributing.md
-- Contributors & Sponsors: contributors.md
-- FAQ: faq.md
-- Reference:
-    - Introduction: reference/introduction.md
-    - Concepts: reference/concepts.md
-    - The Chaos Toolkit Workflow: reference/workflow.md
-    - Usage:
-        - Overview: reference/usage/overview.md
-        - Install: reference/usage/install.md
-        - Upgrade: reference/usage/upgrade.md
-        - The CLI: reference/usage/cli.md
-        - Discover: reference/usage/discover.md
-        - Init: reference/usage/init.md
-        - Run: reference/usage/run.md
-        - Report: reference/usage/report.md
-    - Open API:
-        - Experiment: reference/api/experiment.md
-        - Journal: reference/api/journal.md
-    - Extending Chaos Toolkit:
-        - Extension Approaches: reference/extending/approaches.md
-        - Python: reference/extending/extending-with-python.md
-    - Developing Chaos Toolkit:
-        - Key Project Values: reference/developing/values.md
-        - Core Projects: reference/developing/core.md
-        - Extensions: reference/developing/extensions.md
-        - Technology Choices: reference/developing/technologies.md
+- New to Subatomic: new-to-subatomic.md
