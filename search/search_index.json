@@ -1,0 +1,19 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to ABSA Subatomic!\n\n\n// TODO\n\n\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-absa-subatomic",
+            "text": "// TODO   New to Subatomic  - A useful set of links and\nreference materials if you're new to Subatomic.",
+            "title": "Welcome to ABSA Subatomic!"
+        },
+        {
+            "location": "/new-to-subatomic/",
+            "text": "// TODO",
+            "title": "New to Subatomic"
+        }
+    ]
+}
