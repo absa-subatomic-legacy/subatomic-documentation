@@ -10,9 +10,5 @@ python:
 install:
   - pip install -r requirements.txt
 
-branches:
-  except:
-- gh-pages
-
 script:
   - bash ci.bash
