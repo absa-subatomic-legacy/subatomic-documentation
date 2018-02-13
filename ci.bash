@@ -14,7 +14,7 @@ function build-docs () {
 function publish-docs () {
     echo "Publishing the documentation"
     cd /tmp/site
-    echo "ABSA Docs Publishing" > CNAME
+    echo "subatomic.bison.ninja" > CNAME
     git add .
     git commit -a -m "Built from ${TRAVIS_COMMIT}"
     git push
