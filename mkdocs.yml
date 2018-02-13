@@ -1,11 +1,12 @@
-site_name: ABSA Atomist
-site_author: The chaostoolkit Team
-site_description: Chaos Toolkit
-copyright: '&copy; 2017 chaostoolkit team'
+site_name: ABSA Subatomic
+site_author: The ABSA Subatomic Team
+site_description: ABSA Subatomic
+copyright: '&copy; 2018 ABSA Subatomic Team'
 
 # Configuration
 theme:
   name: material
+  logo: 'images/subatomic.svg'
   palette:
     primary: 'red'
     accent: 'red'

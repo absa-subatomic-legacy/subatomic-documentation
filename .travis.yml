@@ -1,0 +1,14 @@
+language: python
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y jq
+
+python:
+  - 3.5
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - bash ci.bash
