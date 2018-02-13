@@ -5,7 +5,7 @@
 
 Get to the [documentation][live] of the ABSA Subatomic.
 
-[live]: http://chaostoolkit.org/
+[live]: http://subatomic.bison.ninja
 
 ## WIP of the documentation
 
