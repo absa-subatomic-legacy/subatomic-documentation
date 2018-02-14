@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to ABSA Subatomic!\n\n\n// TODO\n\n\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.",
+            "text": "Welcome to Subatomic!\n\n\n// TODO\n\n\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.",
             "title": "Home"
         },
         {
-            "location": "/#welcome-to-absa-subatomic",
+            "location": "/#welcome-to-subatomic",
             "text": "// TODO   New to Subatomic  - A useful set of links and\nreference materials if you're new to Subatomic.",
-            "title": "Welcome to ABSA Subatomic!"
+            "title": "Welcome to Subatomic!"
         },
         {
             "location": "/new-to-subatomic/",
