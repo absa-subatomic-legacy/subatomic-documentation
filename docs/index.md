@@ -1,4 +1,4 @@
-# Welcome to ABSA Subatomic!
+# Welcome to Subatomic!
 
 // TODO
 

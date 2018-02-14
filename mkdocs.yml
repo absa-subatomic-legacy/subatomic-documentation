@@ -1,7 +1,7 @@
-site_name: ABSA Subatomic
-site_author: The ABSA Subatomic Team
-site_description: ABSA Subatomic
-copyright: '&copy; 2018 ABSA Subatomic Team'
+site_name: Subatomic
+site_author: The Subatomic Team
+site_description: Subatomic
+copyright: '&copy; 2018 Subatomic Team'
 
 # Configuration
 theme:
