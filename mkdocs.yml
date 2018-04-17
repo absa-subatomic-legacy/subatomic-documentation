@@ -26,4 +26,8 @@ extra:
       link: https://github.com/absa-subatomic
 pages:
 - Home: index.md
+- User Guide:
+    - 'Overview': 'user-guide/overview.md'
+    - 'User Onboarding': 'user-guide/onboarding.md'
+    - 'Create a Team': 'user-guide/create-a-team.md'
 - New to Subatomic: new-to-subatomic.md
