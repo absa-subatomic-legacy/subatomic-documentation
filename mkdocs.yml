@@ -31,6 +31,7 @@ pages:
     - 'User Onboarding': 'user-guide/onboarding.md'
     - 'Create a Team': 'user-guide/create-a-team.md'
     - 'Create a Project': 'user-guide/create-a-project.md'
+    - 'Add an Application': 'user-guide/add-an-application.md'
 - Quantum Mechanic:
     - 'Command Reference': 'quantum-mechanic/command-reference.md'
 - New to Subatomic: new-to-subatomic.md

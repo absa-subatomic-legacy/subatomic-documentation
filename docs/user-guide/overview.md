@@ -4,7 +4,6 @@ A new end-user can follow this example guide to get started on their organizatio
 ## Tutorial Contents
 
 * [User Onboarding](./onboarding.md)
-* [Create a Team]()
-* [Create a Project]()
-* [Add an Application]()
-* [Invite Team Members]()
+* [Create a Team](./create-a-team.md)
+* [Create a Project](./create-a-project.md)
+* [Add an Application](./add-an-application.md)
