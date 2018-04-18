@@ -26,5 +26,13 @@ extra:
       link: https://github.com/absa-subatomic
 pages:
 - Home: index.md
-- New to Subatomic: new-to-subatomic.md
-- Quantum Mechanic: quantum-mechanic.md
+- User Guide:
+    - 'Overview': 'user-guide/overview.md'
+    - 'User Onboarding': 'user-guide/onboarding.md'
+    - 'Create a Team': 'user-guide/create-a-team.md'
+- New to Subatomic: 'new-to-subatomic.md'
+- Quantum Mechanic:
+    - 'Overview': 'quantum-mechanic/command-reference-index.md'
+    - 'Onboard me': 'quantum-mechanic/sub-onboard-me.md'
+    - 'Apply to team': 'quantum-mechanic/apply-to-team.md'
+    - 'Create team': 'quantum-mechanic/create-team.md'
