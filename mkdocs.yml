@@ -33,4 +33,4 @@ pages:
     - 'Create a Project': 'user-guide/create-a-project.md'
 - New to Subatomic: 'new-to-subatomic.md'
 - Quantum Mechanic:
-    - 'Overview': 'quantum-mechanic/command-reference-index.md'
+    - 'Overview': 'quantum-mechanic/command-reference.md'

@@ -3,7 +3,7 @@ At this point in the guide you should have been presented with a prompt to creat
 
 `sub create team`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference-index.md#create-team)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team)
 
 After invoking the team creation command follow the prompts and enter the details for the team as required. Below is an example of creating a team
 
@@ -21,13 +21,13 @@ A slack channel can also be created using the command
 
 `sub create team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference-index.md#create-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team-channel)
 
 Aleternatively an existing channel can also be linked using the command
 
 `sub link team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference-index.md#link-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#link-team-channel)
 
 The slack channel is then automatically created and the Atomist bot is invited. Below shows the welcome message sent by the Atomist bot when it joins your channel
 
@@ -41,7 +41,7 @@ You should now provision your DevOps environment by clicking on the "Create DevO
 
 `@atomist sub request devops environment`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference-index.md#request-devops-environment)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-devops-environment)
 
 A message is shown when provisioning starts and you are informed when the provisioning is complete. When the provisioning is complete your team will have a DevOps project created inside Openshift. This project hosts your jenkins master along and possibly a config server that will be used by your team's applications. Permissions for all members of your team are automatically configured. Below shows an example of the Openshift DevOps project overview
 
@@ -53,4 +53,4 @@ The team channel is updated with a message detailing possible next steps as seen
 
 For this guide proceed by clicking the "Create project" button and proceed to [Create a Project](./create-a-project.md)
 
-> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference-index.md#add-config-server)
+> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference.md#add-config-server)
