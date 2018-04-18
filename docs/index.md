@@ -5,8 +5,8 @@ Subatomic is toolset designed to automate the provisioning and use of your devel
 ## Getting Started
 There are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.
 
-* [User Guide](user-guide/user-guide-index.md) - A tutorial for getting started as an end user of subatomic.
-* [Quantum Mechanic Command Reference](quantum-mechanic-command-reference-index.md) - A reference guide for using the slack commands in Quantum Mechanic.
+* [User Guide](user-guide/overview.md) - A tutorial for getting started as an end user of subatomic.
+* [Quantum Mechanic Command Reference](quantum-mechanic/command-reference.md) - A reference guide for using the slack commands in Quantum Mechanic.
 * [New to Subatomic](new-to-subatomic.md) - A useful set of links and
 reference materials if you're new to Subatomic.
 
