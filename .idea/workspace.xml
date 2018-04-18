@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b266af0-5bf3-4fcc-afdd-3c630e02e2c2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/atomist-joins.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/create-slack-channel.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/devops-env-created.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/devops-slack-message.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/team-creation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/onboarding/onboarding-command.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/onboarding/team-message.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/quantum-mechanic/command-reference-index.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/user-guide/create-a-team.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/user-guide/onboarding.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/user-guide/overview.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" afterPath="$PROJECT_DIR$/docs/index.md" />
-      <change beforePath="$PROJECT_DIR$/docs/quantum-mechanic.md" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/bitbucket-url.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/create-a-project.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/create-an-application.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/link-bitbucket-project.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/openshift-environments.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/post-link-bitbucket.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-project/post-project-creation.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/user-guide/create-a-project.md" />
+      <change beforePath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/create-slack-channel.png" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/create-slack-channel.png" />
+      <change beforePath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/team-creation.png" afterPath="$PROJECT_DIR$/docs/images/user-guide/create-a-team/team-creation.png" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +41,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="251">
-                <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -79,21 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="398">
+              <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="command-reference-index.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="command-reference-index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/quantum-mechanic/command-reference-index.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -133,11 +129,11 @@
         <option value="$PROJECT_DIR$/docs/quantum-mechanic/onboard-me.md" />
         <option value="$PROJECT_DIR$/docs/quantum-mechanic/sub-onboard-me.md" />
         <option value="$PROJECT_DIR$/docs/quantum-mechanic/apply-to-team.md" />
-        <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/docs/quantum-mechanic/create-team.md" />
         <option value="$PROJECT_DIR$/docs/user-guide/create-a-team.md" />
         <option value="$PROJECT_DIR$/docs/user-guide/onboarding.md" />
         <option value="$PROJECT_DIR$/docs/quantum-mechanic/command-reference-index.md" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
       </list>
     </option>
   </component>
@@ -366,15 +362,16 @@
       <option name="presentableId" value="Default" />
       <updated>1523966610648</updated>
       <workItem from="1523966612037" duration="2018000" />
-      <workItem from="1523969164970" duration="14386000" />
+      <workItem from="1523969164970" duration="14499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16404000" />
+    <option name="totallyTimeSpent" value="16517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1680" height="971" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -385,7 +382,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37214613" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37214613" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -492,14 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/quantum-mechanic/create-team.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -537,7 +526,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="251">
-            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -558,7 +547,15 @@
     <entry file="file://$PROJECT_DIR$/docs/quantum-mechanic/command-reference-index.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding />
         </state>
       </provider>
