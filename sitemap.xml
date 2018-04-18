@@ -4,15 +4,59 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
+    <url>
+     <loc>/user-guide/overview/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/user-guide/onboarding/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/user-guide/create-a-team/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/user-guide/create-a-project/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/user-guide/add-an-application/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/quantum-mechanic/command-reference/</loc>
+     <lastmod>2018-04-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
     <url>
      <loc>/new-to-subatomic/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-04-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
