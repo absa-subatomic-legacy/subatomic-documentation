@@ -30,4 +30,5 @@ pages:
     - 'Overview': 'user-guide/overview.md'
     - 'User Onboarding': 'user-guide/onboarding.md'
     - 'Create a Team': 'user-guide/create-a-team.md'
+    - 'Create a Project': 'user-guide/create-a-project.md'
 - New to Subatomic: new-to-subatomic.md
