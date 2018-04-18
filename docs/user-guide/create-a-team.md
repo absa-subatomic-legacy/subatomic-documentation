@@ -1,4 +1,4 @@
-# Create a Team
+# **Create a Team**
 At this point in the guide you should have been presented with a prompt to create a new team. You should have arrived at this point through the conversational prompts presented after onboarding your user. Note that team creation can also be invoked through the command
 
 `sub create team`
@@ -11,7 +11,7 @@ After invoking the team creation command follow the prompts and enter the detail
 
 The values entered can be modified or submitted as before. Submitting the values creates and stores a new team with nothing associated to it within the Subatomic environment. 
 
-## Associate a Slack Channel
+## **Associate a Slack Channel**
 
 You are then prompted to associate a slack channel to this team. Follow the prompts to link the slack channel, and choose to either create a new channel or link an existing channel to the team. Below is an example of creating a new slack channel to associate to the team.
 
@@ -35,7 +35,7 @@ The slack channel is then automatically created and the Atomist bot is invited. 
 
 > If linking an existing channel that is private, there will be some manual steps involved to invite the atomist bot to your private channel.
 
-## Create a DevOps Environment
+## **Create a DevOps Environment**
 
 You should now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of through direct messages to the atomist bot)
 

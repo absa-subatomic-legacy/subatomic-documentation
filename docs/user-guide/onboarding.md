@@ -1,4 +1,4 @@
-# User Onboarding
+# **User Onboarding**
 Before doing anything on Subatomic, a user needs to be onboarded onto the system to provide context for any commands issued to Quantum Mechanic. To begin the onboarding process open a direct message slack conversation the the Atomist bot.  the following command
 
 `sub onboard me`

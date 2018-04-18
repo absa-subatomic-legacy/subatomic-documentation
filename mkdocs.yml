@@ -34,6 +34,3 @@ pages:
 - New to Subatomic: 'new-to-subatomic.md'
 - Quantum Mechanic:
     - 'Overview': 'quantum-mechanic/command-reference-index.md'
-    - 'Onboard me': 'quantum-mechanic/sub-onboard-me.md'
-    - 'Apply to team': 'quantum-mechanic/apply-to-team.md'
-    - 'Create team': 'quantum-mechanic/create-team.md'
