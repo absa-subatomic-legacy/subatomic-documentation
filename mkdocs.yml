@@ -33,5 +33,5 @@ pages:
     - 'Create a Project': 'user-guide/create-a-project.md'
     - 'Add an Application': 'user-guide/add-an-application.md'
 - Quantum Mechanic:
-    - 'Overview': 'quantum-mechanic/command-reference.md'
+    - 'Command Reference': 'quantum-mechanic/command-reference.md'
 - New to Subatomic: new-to-subatomic.md

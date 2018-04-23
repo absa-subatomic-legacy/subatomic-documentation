@@ -13,7 +13,7 @@ The values entered can be modified or submitted as before. Submitting the values
 
 ## **Associate a Slack Channel**
 
-You are then prompted to associate a slack channel to this team. Follow the prompts to link the slack channel, and choose to either create a new channel or link an existing channel to the team. Below is an example of creating a new slack channel to associate to the team.
+You are now prompted to associate a slack channel to this team. Follow the prompts to link the slack channel, and choose to either create a new channel or link an existing channel to the team. Below is an example of creating a new slack channel to associate to the team.
 
 ![Slack Channel Creation](/images/user-guide/create-a-team/create-slack-channel.png)
 
@@ -23,7 +23,7 @@ A slack channel can also be created using the command
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team-channel)
 
-Aleternatively an existing channel can also be linked using the command
+Alternatively an existing channel can also be linked using the command
 
 `sub link team channel`
 
