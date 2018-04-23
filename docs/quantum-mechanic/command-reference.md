@@ -14,6 +14,7 @@ You will need to input two values `team name` and `team description`. This will 
 the respective values in Subatomic.
 
 ### **apply to team**
+This will send a request to the channel that you type in. Once accepted you will be within said channel.
 
 ### **create team channel**
 This will create a public slack channel, if you want a private channel you will need to create
