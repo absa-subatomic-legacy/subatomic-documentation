@@ -39,7 +39,10 @@ Subatomic project.
 ### **link bitbucket project**
 You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 
-
 ### **add config server**
 
 ### **link library**
+
+### **link application**
+
+### **jenkins build**
