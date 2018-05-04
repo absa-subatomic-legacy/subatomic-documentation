@@ -25,8 +25,10 @@ If you already have an existing slack channel use this command. Subatomic will a
 to this channel, however if the channel is private you will need to manually invite the bot.
 
 ### **request devops environment**
+This will create a  new OpenShift DevOps environment for your team or use an existing one.
 
 ### **request project environments**
+Creates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.
 
 ### **create project**
 You will need to input two values `project name` and `project description`. This will create a project within
@@ -40,9 +42,13 @@ Subatomic project.
 You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 
 ### **add config server**
+Adds a config server to the selected OpenShift project.
 
 ### **link library**
+Links a library contained within a BitBucket project to the project.
 
 ### **link application**
+Links an application contained within a BitBucket project to the project.
 
 ### **jenkins build**
+Starts a jenkins build with the current project.
