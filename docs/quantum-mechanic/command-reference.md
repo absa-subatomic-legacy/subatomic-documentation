@@ -38,6 +38,9 @@ Subatomic.
 You will need to input `project name`. Subatomic will then create a Bitbucket project and link it to the current
 Subatomic project.
 
+### **list projects**
+Lists all projects associated with the select team.
+
 ### **link bitbucket project**
 You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 
@@ -49,6 +52,9 @@ Links a library contained within a BitBucket project to the project.
 
 ### **link application**
 Links an application contained within a BitBucket project to the project.
+
+### **associate team**
+//TODO
 
 ### **jenkins build**
 Starts a jenkins build with the current project.
