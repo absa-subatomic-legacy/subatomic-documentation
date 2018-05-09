@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to Subatomic!\n\n\nSubatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being to deployed into multiple environments. The project home can be found \nhere\n.\n\n\nGetting Started\n\n\nThere are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.\n\n\n\n\nUser Guide\n - A tutorial for getting started as an end user of subatomic.\n\n\nQuantum Mechanic Command Reference\n - A reference guide for using the slack commands in Quantum Mechanic.\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.\n\n\n\n\nThe Subatomic Stack\n\n\nSubatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.\n\n\n\n\nOpenshift\n - \"Red Hat\u00ae OpenShift is a container application platform that brings docker and Kubernetes to the enterprise\". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through subatomic.\n\n\nBitbucket Server\n - Subatomic's primary market is large development teams and naturally this tends towards large organizational environments. The Atlassian stack is common place in such environments and as such Bitbucket Server is currently the only supported source control system supported in Subatomic.\n\n\nSlack\n - Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the \nAtomist\n framework.",
+            "text": "Welcome to Subatomic!\n\n\nSubatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being deployed into multiple environments. The project home can be found \nhere\n.\n\n\nGetting Started\n\n\nThere are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.\n\n\n\n\nUser Guide\n - A tutorial for getting started as an end user of subatomic.\n\n\nQuantum Mechanic Command Reference\n - A reference guide for using the slack commands in Quantum Mechanic.\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.\n\n\n\n\nThe Subatomic Stack\n\n\nSubatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.\n\n\n\n\nOpenshift\n - \"Red Hat\u00ae OpenShift is a container application platform that brings docker and Kubernetes to the enterprise\". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through subatomic.\n\n\nBitbucket Server\n - Subatomic's primary market is large development teams and naturally this tends towards large organizational environments. The Atlassian stack is common place in such environments and as such Bitbucket Server is currently the only supported source control system supported in Subatomic.\n\n\nSlack\n - Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the \nAtomist\n framework.",
             "title": "Home"
         },
         {
             "location": "/#welcome-to-subatomic",
-            "text": "Subatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being to deployed into multiple environments. The project home can be found  here .",
+            "text": "Subatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being deployed into multiple environments. The project home can be found  here .",
             "title": "Welcome to Subatomic!"
         },
         {
@@ -107,8 +107,83 @@
         },
         {
             "location": "/quantum-mechanic/command-reference/",
-            "text": "",
+            "text": "Quantum Mechanic\n\n\nBelow are the commands and their explanations that you'll encounter while using subatomic:\n\n\nonboard me\n\n\nThe most important command, without onboarding yourself you will not be able to run any subatomic commands.\n\n\nYou will need to input your \nfirst name\n, \nlast name\n, \nemail address\n and \ndomain username\n.\nOnce submitted you will be able to execute subatomic commands granted you have the permission to execute them.\n\n\nFor a detailed walk through click \nhere\n\n\ncreate team\n\n\nYou will need to input two values \nteam name\n and \nteam description\n. This will create a team with\nthe respective values in Subatomic.\n\n\napply to team\n\n\nThis will send a request to the channel that you type in. Once accepted you will be within said channel.\n\n\ncreate team channel\n\n\nThis will create a public slack channel, if you want a private channel you will need to create\nit manually then proceed to \nsub link team channel\n.\n\n\nlink team channel\n\n\nIf you already have an existing slack channel use this command. Subatomic will add the atomist bot\nto this channel, however if the channel is private you will need to manually invite the bot.\n\n\nrequest devops environment\n\n\nThis will create a  new OpenShift DevOps environment for your team or use an existing one.\n\n\nrequest project environments\n\n\nCreates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.\n\n\ncreate project\n\n\nYou will need to input two values \nproject name\n and \nproject description\n. This will create a project within\nSubatomic.\n\n\ncreate bitbucket project\n\n\nYou will need to input \nproject name\n. Subatomic will then create a Bitbucket project and link it to the current\nSubatomic project.\n\n\nlink bitbucket project\n\n\nYou will need to input your \nbitbucket project key\n and Subatomic will find the existing project within Bitbucket.\n\n\nadd config server\n\n\nAdds a config server to the selected OpenShift project.\n\n\nlink library\n\n\nLinks a library contained within a BitBucket project to the project.\n\n\nlink application\n\n\nLinks an application contained within a BitBucket project to the project.\n\n\njenkins build\n\n\nStarts a jenkins build with the current project.",
             "title": "Command Reference"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#quantum-mechanic",
+            "text": "Below are the commands and their explanations that you'll encounter while using subatomic:",
+            "title": "Quantum Mechanic"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#onboard-me",
+            "text": "The most important command, without onboarding yourself you will not be able to run any subatomic commands.  You will need to input your  first name ,  last name ,  email address  and  domain username .\nOnce submitted you will be able to execute subatomic commands granted you have the permission to execute them.  For a detailed walk through click  here",
+            "title": "onboard me"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#create-team",
+            "text": "You will need to input two values  team name  and  team description . This will create a team with\nthe respective values in Subatomic.",
+            "title": "create team"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#apply-to-team",
+            "text": "This will send a request to the channel that you type in. Once accepted you will be within said channel.",
+            "title": "apply to team"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#create-team-channel",
+            "text": "This will create a public slack channel, if you want a private channel you will need to create\nit manually then proceed to  sub link team channel .",
+            "title": "create team channel"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#link-team-channel",
+            "text": "If you already have an existing slack channel use this command. Subatomic will add the atomist bot\nto this channel, however if the channel is private you will need to manually invite the bot.",
+            "title": "link team channel"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#request-devops-environment",
+            "text": "This will create a  new OpenShift DevOps environment for your team or use an existing one.",
+            "title": "request devops environment"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#request-project-environments",
+            "text": "Creates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.",
+            "title": "request project environments"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#create-project",
+            "text": "You will need to input two values  project name  and  project description . This will create a project within\nSubatomic.",
+            "title": "create project"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#create-bitbucket-project",
+            "text": "You will need to input  project name . Subatomic will then create a Bitbucket project and link it to the current\nSubatomic project.",
+            "title": "create bitbucket project"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#link-bitbucket-project",
+            "text": "You will need to input your  bitbucket project key  and Subatomic will find the existing project within Bitbucket.",
+            "title": "link bitbucket project"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#add-config-server",
+            "text": "Adds a config server to the selected OpenShift project.",
+            "title": "add config server"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#link-library",
+            "text": "Links a library contained within a BitBucket project to the project.",
+            "title": "link library"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#link-application",
+            "text": "Links an application contained within a BitBucket project to the project.",
+            "title": "link application"
+        },
+        {
+            "location": "/quantum-mechanic/command-reference/#jenkins-build",
+            "text": "Starts a jenkins build with the current project.",
+            "title": "jenkins build"
         },
         {
             "location": "/new-to-subatomic/",

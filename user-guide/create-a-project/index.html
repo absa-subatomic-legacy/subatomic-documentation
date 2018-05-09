@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
       
@@ -492,7 +492,7 @@
                   <a href="https://github.com/absa-subatomic/subatomic-documentation/edit/master/docs/user-guide/create-a-project.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="create-a-project">Create a Project</h1>
+                <h1 id="create-a-project"><strong>Create a Project</strong></h1>
 <p>At this point in the guide you should have been presented with a prompt to create a new project. You should have arrived at this point through the conversational prompts presented after creating your team and associated a slack channel to it. Note that project creation can also be invoked through the command run in your team channel as below</p>
 <p><code>@atomist sub create project</code></p>
 <blockquote>
@@ -501,7 +501,7 @@
 <p>When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for you project. An example of this is seen below</p>
 <p><img alt="Project Creation" src="../../images/user-guide/create-a-project/create-a-project.png" /></p>
 <p>Re-assign the values if necessary and submit when ready.</p>
-<h2 id="linking-a-bitbucket-project">Linking a Bitbucket Project</h2>
+<h2 id="linking-a-bitbucket-project"><strong>Linking a Bitbucket Project</strong></h2>
 <p>You should now be presented with options to link or create a Bitbucket project to associate to the Subatomic project, and an option to create the necessary OpenShift environments. </p>
 <p><img alt="Post Project Creation" src="../../images/user-guide/create-a-project/post-project-creation.png" /></p>
 <p>Choose the option to link an existing Bitbucket project. This can also be invoked using the command below in the channel</p>
@@ -515,7 +515,7 @@
 <p>Note that the Bitbucket project key is pulled from the URL of the project. The URL shown when browsing the Test project above is as follows with the project key highlighted</p>
 <p><img alt="Bitbucket URL" src="../../images/user-guide/create-a-project/bitbucket-url.png" /></p>
 <p>Submit the command and you should be informed once the Bitbucket project has been configured. The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. </p>
-<h2 id="create-openshift-environments">Create OpenShift Environments</h2>
+<h2 id="create-openshift-environments"><strong>Create OpenShift Environments</strong></h2>
 <p>You should now be prompted to create the associated Openshift evnironments for the project</p>
 <p><img alt="Post Link Bitbucket" src="../../images/user-guide/create-a-project/post-link-bitbucket.png" /></p>
 <p>Click the "Create OpenShift environments" button. This command can also be invoked using the command below in the team channel</p>
@@ -526,7 +526,7 @@
 <p>You will be notified that your Openshift environments are being provisioned and once they are complete they should be visible in your Openshift instance.</p>
 <p><img alt="Openshift Environments" src="../../images/user-guide/create-a-project/openshift-environments.png" /></p>
 <p>Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quota's automatically configured for your team.</p>
-<h2 id="add-an-application">Add an Application</h2>
+<h2 id="add-an-application"><strong>Add an Application</strong></h2>
 <p>Once the project environments were provisioned you should have been prompted to create a new application in the project.</p>
 <p><img alt="Create Application" src="../../images/user-guide/create-a-project/create-an-application.png" /></p>
 <p>Choose to link an existing application and proceed to <a href="../add-an-application">Add an Application</a>.</p>
