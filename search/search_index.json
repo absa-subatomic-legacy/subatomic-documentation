@@ -107,7 +107,7 @@
         },
         {
             "location": "/quantum-mechanic/command-reference/",
-            "text": "Quantum Mechanic\n\n\nBelow are the commands and their explanations that you'll encounter while using subatomic:\n\n\nonboard me\n\n\nThe most important command, without onboarding yourself you will not be able to run any subatomic commands.\n\n\nYou will need to input your \nfirst name\n, \nlast name\n, \nemail address\n and \ndomain username\n.\nOnce submitted you will be able to execute subatomic commands granted you have the permission to execute them.\n\n\nFor a detailed walk through click \nhere\n\n\ncreate team\n\n\nYou will need to input two values \nteam name\n and \nteam description\n. This will create a team with\nthe respective values in Subatomic.\n\n\napply to team\n\n\nThis will send a request to the channel that you type in. Once accepted you will be within said channel.\n\n\ncreate team channel\n\n\nThis will create a public slack channel, if you want a private channel you will need to create\nit manually then proceed to \nsub link team channel\n.\n\n\nlink team channel\n\n\nIf you already have an existing slack channel use this command. Subatomic will add the atomist bot\nto this channel, however if the channel is private you will need to manually invite the bot.\n\n\nrequest devops environment\n\n\nThis will create a  new OpenShift DevOps environment for your team or use an existing one.\n\n\nrequest project environments\n\n\nCreates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.\n\n\ncreate project\n\n\nYou will need to input two values \nproject name\n and \nproject description\n. This will create a project within\nSubatomic.\n\n\ncreate bitbucket project\n\n\nYou will need to input \nproject name\n. Subatomic will then create a Bitbucket project and link it to the current\nSubatomic project.\n\n\nlink bitbucket project\n\n\nYou will need to input your \nbitbucket project key\n and Subatomic will find the existing project within Bitbucket.\n\n\nadd config server\n\n\nAdds a config server to the selected OpenShift project.\n\n\nlink library\n\n\nLinks a library contained within a BitBucket project to the project.\n\n\nlink application\n\n\nLinks an application contained within a BitBucket project to the project.\n\n\njenkins build\n\n\nStarts a jenkins build with the current project.",
+            "text": "Quantum Mechanic\n\n\nBelow are the commands and their explanations that you'll encounter while using subatomic:\n\n\nonboard me\n\n\nThe most important command, without onboarding yourself you will not be able to run any subatomic commands.\n\n\nYou will need to input your \nfirst name\n, \nlast name\n, \nemail address\n and \ndomain username\n.\nOnce submitted you will be able to execute subatomic commands granted you have the permission to execute them.\n\n\nFor a detailed walk through click \nhere\n\n\ncreate team\n\n\nYou will need to input two values \nteam name\n and \nteam description\n. This will create a team with\nthe respective values in Subatomic.\n\n\napply to team\n\n\nThis will send a request to the channel that you type in. Once accepted you will be within said channel.\n\n\ncreate team channel\n\n\nThis will create a public slack channel, if you want a private channel you will need to create\nit manually then proceed to \nsub link team channel\n.\n\n\nlink team channel\n\n\nIf you already have an existing slack channel use this command. Subatomic will add the atomist bot\nto this channel, however if the channel is private you will need to manually invite the bot.\n\n\nrequest devops environment\n\n\nThis will create a  new OpenShift DevOps environment for your team or use an existing one.\n\n\nrequest project environments\n\n\nCreates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.\n\n\ncreate project\n\n\nYou will need to input two values \nproject name\n and \nproject description\n. This will create a project within\nSubatomic.\n\n\ncreate bitbucket project\n\n\nYou will need to input \nproject name\n. Subatomic will then create a Bitbucket project and link it to the current\nSubatomic project.\n\n\nlist projects\n\n\nLists all projects associated with the select team.\n\n\nlink bitbucket project\n\n\nYou will need to input your \nbitbucket project key\n and Subatomic will find the existing project within Bitbucket.\n\n\nadd config server\n\n\nAdds a config server to the selected OpenShift project.\n\n\nlink library\n\n\nLinks a library contained within a BitBucket project to the project.\n\n\nlink application\n\n\nLinks an application contained within a BitBucket project to the project.\n\n\nassociate team\n\n\n//TODO\n\n\njenkins build\n\n\nStarts a jenkins build with the current project.",
             "title": "Command Reference"
         },
         {
@@ -161,6 +161,11 @@
             "title": "create bitbucket project"
         },
         {
+            "location": "/quantum-mechanic/command-reference/#list-projects",
+            "text": "Lists all projects associated with the select team.",
+            "title": "list projects"
+        },
+        {
             "location": "/quantum-mechanic/command-reference/#link-bitbucket-project",
             "text": "You will need to input your  bitbucket project key  and Subatomic will find the existing project within Bitbucket.",
             "title": "link bitbucket project"
@@ -181,9 +186,34 @@
             "title": "link application"
         },
         {
+            "location": "/quantum-mechanic/command-reference/#associate-team",
+            "text": "//TODO",
+            "title": "associate team"
+        },
+        {
             "location": "/quantum-mechanic/command-reference/#jenkins-build",
             "text": "Starts a jenkins build with the current project.",
             "title": "jenkins build"
+        },
+        {
+            "location": "/config-server/",
+            "text": "Config Server\n\n\n//TODO",
+            "title": "Config Server"
+        },
+        {
+            "location": "/config-server/#config-server",
+            "text": "//TODO",
+            "title": "Config Server"
+        },
+        {
+            "location": "/storage/",
+            "text": "Storage\n\n\n//TODO",
+            "title": "Storage"
+        },
+        {
+            "location": "/storage/#storage",
+            "text": "//TODO",
+            "title": "Storage"
         },
         {
             "location": "/new-to-subatomic/",

@@ -55,6 +55,22 @@
 
     
     <url>
+     <loc>/config-server/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/storage/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/new-to-subatomic/</loc>
      <lastmod>2018-05-09</lastmod>
      <changefreq>daily</changefreq>
