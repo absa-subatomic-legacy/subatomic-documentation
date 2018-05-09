@@ -34,4 +34,6 @@ pages:
     - 'Add an Application': 'user-guide/add-an-application.md'
 - Quantum Mechanic:
     - 'Command Reference': 'quantum-mechanic/command-reference.md'
+- Config Server: config-server.md
+- Storage: storage.md
 - New to Subatomic: new-to-subatomic.md
