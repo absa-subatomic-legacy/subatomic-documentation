@@ -1,4 +1,4 @@
-# Create a Project
+# **Create a Project**
 At this point in the guide you should have been presented with a prompt to create a new project. You should have arrived at this point through the conversational prompts presented after creating your team and associated a slack channel to it. Note that project creation can also be invoked through the command run in your team channel as below
 
 `@atomist sub create project`
@@ -11,7 +11,7 @@ When talking to the Atomist bot in a channel, conversational prompts will occur 
 
 Re-assign the values if necessary and submit when ready.
 
-## Linking a Bitbucket Project
+## **Linking a Bitbucket Project**
 You should now be presented with options to link or create a Bitbucket project to associate to the Subatomic project, and an option to create the necessary OpenShift environments. 
 
 ![Post Project Creation](/images/user-guide/create-a-project/post-project-creation.png)
@@ -34,7 +34,7 @@ Note that the Bitbucket project key is pulled from the URL of the project. The U
 
 Submit the command and you should be informed once the Bitbucket project has been configured. The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. 
 
-## Create OpenShift Environments
+## **Create OpenShift Environments**
 
 You should now be prompted to create the associated Openshift evnironments for the project
 
@@ -52,7 +52,7 @@ You will be notified that your Openshift environments are being provisioned and 
 
 Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quota's automatically configured for your team.
 
-## Add an Application
+## **Add an Application**
 
 Once the project environments were provisioned you should have been prompted to create a new application in the project.
 
