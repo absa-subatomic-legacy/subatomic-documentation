@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to Subatomic!\n\n\nSubatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being deployed into multiple environments. The project home can be found \nhere\n.\n\n\nGetting Started\n\n\nThere are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.\n\n\n\n\nUser Guide\n - A tutorial for getting started as an end user of subatomic.\n\n\nQuantum Mechanic Command Reference\n - A reference guide for using the slack commands in Quantum Mechanic.\n\n\nNew to Subatomic\n - A useful set of links and\nreference materials if you're new to Subatomic.\n\n\n\n\nThe Subatomic Stack\n\n\nSubatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.\n\n\n\n\nOpenshift\n - \"Red Hat\u00ae OpenShift is a container application platform that brings docker and Kubernetes to the enterprise\". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through subatomic.\n\n\nBitbucket Server\n - Subatomic's primary market is large development teams and naturally this tends towards large organizational environments. The Atlassian stack is common place in such environments and as such Bitbucket Server is currently the only supported source control system supported in Subatomic.\n\n\nSlack\n - Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the \nAtomist\n framework.",
+            "text": "Welcome to Subatomic!\n\n\nSubatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being deployed into multiple environments. The project home can be found \nhere\n.\n\n\nGetting Started\n\n\nThere are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.\n\n\n\n\nUser Guide\n - A tutorial for getting started as an end user of subatomic.\n\n\nQuantum Mechanic Command Reference\n - A reference guide for using the slack commands in Quantum Mechanic.\n\n\n\n\nThe Subatomic Stack\n\n\nSubatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.\n\n\n\n\nOpenshift\n - \"Red Hat\u00ae OpenShift is a container application platform that brings docker and Kubernetes to the enterprise\". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through subatomic.\n\n\nBitbucket Server\n - Subatomic's primary market is large development teams and naturally this tends towards large organizational environments. The Atlassian stack is common place in such environments and as such Bitbucket Server is currently the only supported source control system supported in Subatomic.\n\n\nSlack\n - Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the \nAtomist\n framework.",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#getting-started",
-            "text": "There are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.   User Guide  - A tutorial for getting started as an end user of subatomic.  Quantum Mechanic Command Reference  - A reference guide for using the slack commands in Quantum Mechanic.  New to Subatomic  - A useful set of links and\nreference materials if you're new to Subatomic.",
+            "text": "There are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.   User Guide  - A tutorial for getting started as an end user of subatomic.  Quantum Mechanic Command Reference  - A reference guide for using the slack commands in Quantum Mechanic.",
             "title": "Getting Started"
         },
         {
@@ -194,31 +194,6 @@
             "location": "/quantum-mechanic/command-reference/#jenkins-build",
             "text": "Starts a jenkins build with the current project.",
             "title": "jenkins build"
-        },
-        {
-            "location": "/config-server/",
-            "text": "Config Server\n\n\n//TODO",
-            "title": "Config Server"
-        },
-        {
-            "location": "/config-server/#config-server",
-            "text": "//TODO",
-            "title": "Config Server"
-        },
-        {
-            "location": "/storage/",
-            "text": "Storage\n\n\n//TODO",
-            "title": "Storage"
-        },
-        {
-            "location": "/storage/#storage",
-            "text": "//TODO",
-            "title": "Storage"
-        },
-        {
-            "location": "/new-to-subatomic/",
-            "text": "// TODO",
-            "title": "New to Subatomic"
         }
     ]
 }
