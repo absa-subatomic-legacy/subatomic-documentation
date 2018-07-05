@@ -1,14 +1,11 @@
 # **Welcome to Subatomic!**
 
-Subatomic is toolset designed to automate the provisioning and use of your developement environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up an running from scratch to being to deployed into multiple environments. The project home can be found [here](https://github.com/absa-subatomic).
+Subatomic is a toolset designed to automate the provisioning and use of your development environment from infrastructure through to CI/CD pipelines and associated monitoring. The goals of the project are to remove the hassle and cost of repeating the processes required to get new projects up and running from scratch to being deployed into multiple environments. The project home can be found [here](https://github.com/absa-subatomic).
 
 ## **Getting Started**
 There are many moving pieces in the Subatomic environment but a users main interaction with the system will occur through the Quantum Mechanic slack client. In future a web ui will be added for a more powerful user experience. Below are some links to help a user getting started with the system.
 
-* [User Guide](user-guide/user-guide-index.md) - A tutorial for getting started as an end user of subatomic.
-* [Quantum Mechanic Command Reference](quantum-mechanic/command-reference-index.md) - A reference guide for using the slack commands in Quantum Mechanic.
-* [New to Subatomic](new-to-subatomic.md) - A useful set of links and
-reference materials if you're new to Subatomic.
+* [User Guide](user-guide/overview.md) - A tutorial for getting started as an end user of subatomic.
 
 ## **The Subatomic Stack**
 Subatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.

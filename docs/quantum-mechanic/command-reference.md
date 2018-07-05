@@ -14,18 +14,27 @@ You will need to input two values `team name` and `team description`. This will 
 the respective values in Subatomic.
 
 ### **apply to team**
+This will send a request to the channel that you type in. Once accepted you will be within said channel.
+
+### **add team member**
+Adds a member to an existing team.
+
+### **add slack**
+Adds Slack details to an existing team member.
 
 ### **create team channel**
 This will create a public slack channel, if you want a private channel you will need to create
-it manually then proceed to [sub link team channel](./command-reference-index.md#link-team-channel).
+it manually then proceed to [sub link team channel](./command-reference.md#link-team-channel).
 
 ### **link team channel**
 If you already have an existing slack channel use this command. Subatomic will add the atomist bot
 to this channel, however if the channel is private you will need to manually invite the bot.
 
 ### **request devops environment**
+This will create a  new OpenShift DevOps environment for your team or use an existing one.
 
 ### **request project environments**
+Creates new OpenShift environments for a project. This will create a DEV, SIT and UAT environments.
 
 ### **create project**
 You will need to input two values `project name` and `project description`. This will create a project within
@@ -35,10 +44,32 @@ Subatomic.
 You will need to input `project name`. Subatomic will then create a Bitbucket project and link it to the current
 Subatomic project.
 
+### **list projects**
+Lists all projects associated with the select team.
+
 ### **link bitbucket project**
 You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 
-
 ### **add config server**
+Adds a config server to the selected OpenShift project.
 
 ### **link library**
+Links a library contained within a BitBucket project to the project.
+
+### **link application**
+Links an application contained within a BitBucket project to the project.
+
+### **associate team**
+Links a team to an existing project. 
+
+### **jenkins build**
+Starts a jenkins build with the current project.
+
+### **configure custom package**
+Configure an existing application/library using custom templates.
+
+### **configure package**
+Configures an existing application/library using a predefined template.
+
+### **create openshift pvc**
+Creates a new OpenShift Persistent Volume Claim.
