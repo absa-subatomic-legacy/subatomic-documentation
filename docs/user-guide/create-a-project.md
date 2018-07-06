@@ -5,7 +5,7 @@ At this point in the guide you should have been presented with a prompt to creat
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-project)
 
-When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for you project. An example of this is seen below
+When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for your project. An example of this is seen below
 
 ![Project Creation](/images/user-guide/create-a-project/create-a-project.png)
 
@@ -36,7 +36,7 @@ Submit the command and you should be informed once the Bitbucket project has bee
 
 ## **Create OpenShift Environments**
 
-You should now be prompted to create the associated Openshift evnironments for the project
+You should now be prompted to create the associated Openshift environments for the project
 
 ![Post Link Bitbucket](/images/user-guide/create-a-project/post-link-bitbucket.png)
 
@@ -50,11 +50,11 @@ You will be notified that your Openshift environments are being provisioned and 
 
 ![Openshift Environments](/images/user-guide/create-a-project/openshift-environments.png)
 
-Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quota's automatically configured for your team.
+Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.
 
 ## **Add an Application**
 
-Once the project environments were provisioned you should have been prompted to create a new application in the project.
+Once the project environments are provisioned you should be prompted to create a new application in the project.
 
 ![Create Application](/images/user-guide/create-a-project/create-an-application.png)
 

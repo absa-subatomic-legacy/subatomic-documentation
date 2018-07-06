@@ -37,13 +37,13 @@ The slack channel is then automatically created and the Atomist bot is invited. 
 
 ## **Create a DevOps Environment**
 
-You should now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of through direct messages to the atomist bot)
+You should now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of direct messages to the atomist bot)
 
 `@atomist sub request devops environment`
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-devops-environment)
 
-A message is shown when provisioning starts and you are informed when the provisioning is complete. When the provisioning is complete your team will have a DevOps project created inside Openshift. This project hosts your jenkins master along and possibly a config server that will be used by your team's applications. Permissions for all members of your team are automatically configured. Below shows an example of the Openshift DevOps project overview
+A message is shown when provisioning starts and you are informed when the provisioning is complete. When the provisioning is complete your team will have a DevOps project created inside Openshift. This project hosts your jenkins master along with a possible config server that will be used by your team's applications. Permissions for all members of your team are automatically configured. Below shows an example of the Openshift DevOps project overview
 
 ![DevOps Environment](/images/user-guide/create-a-team/devops-env-created.png)
 
