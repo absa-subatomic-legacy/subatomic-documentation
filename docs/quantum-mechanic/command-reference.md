@@ -16,6 +16,12 @@ the respective values in Subatomic.
 ### **apply to team**
 This will send a request to the channel that you type in. Once accepted you will be within said channel.
 
+### **add team member**
+Adds a member to an existing team.
+
+### **add slack**
+Adds Slack details to an existing team member.
+
 ### **create team channel**
 This will create a public slack channel, if you want a private channel you will need to create
 it manually then proceed to [sub link team channel](./command-reference.md#link-team-channel).
@@ -54,7 +60,16 @@ Links a library contained within a BitBucket project to the project.
 Links an application contained within a BitBucket project to the project.
 
 ### **associate team**
-//TODO
+Links a team to an existing project. 
 
 ### **jenkins build**
-Starts a jenkins build with the current project.
+Starts a jenkins build with the selected project.
+
+### **configure custom package**
+Configure an existing application/library using custom templates.
+
+### **configure package**
+Configures an existing application/library using a predefined template.
+
+### **create openshift pvc**
+Creates a new OpenShift Persistent Volume Claim.
