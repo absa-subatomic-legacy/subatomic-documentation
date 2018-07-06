@@ -353,13 +353,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-component" title="Configure Component" class="md-nav__link">
-    Configure Component
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#jenkins-build" title="Jenkins Build" class="md-nav__link">
     Jenkins Build
   </a>
@@ -418,18 +411,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../tenants/" title="Tenants" class="md-nav__link">
-      Tenants
-    </a>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -449,13 +430,6 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configure-component" title="Configure Component" class="md-nav__link">
-    Configure Component
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#jenkins-build" title="Jenkins Build" class="md-nav__link">
@@ -491,18 +465,11 @@
 </blockquote>
 <p>Below is an example of linking the existing application to your project</p>
 <p><img alt="Add Application" src="../../images/user-guide/add-an-application/add-application.png" /></p>
-<p>The flow for adding an existing application is different to all the commands encounterd so far. First the prompts for an application name and description are shown. Enter these and submit them when you are satisfied with your values. Subatomic will then pull a list of all the repositories in your Bitbucket project and you can select which one holds the source for the application you wish to use. Once you have made your selection you will be informed that your application is being provisioned.</p>
-<h2 id="configure-component"><strong>Configure Component</strong></h2>
-<p>You will be presented with button to configure your component. Upon selection you will have the option to choose which package definition to use for your project. E.g. for a springboot-1 project you would choose <code>maven-springboot-1-deployable</code>. Theses contain predefined definitions, if you would like to specify which components to use rather use the <a href="../../quantum-mechanic/command-reference/#configure-custom-package">sub configure custom package</a> instead.</p>
-<p><code>@atomist sub configure package</code></p>
-<blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#configure-package">here</a></p>
-</blockquote>
-<p><img alt="Add Application" src="../../images/user-guide/add-an-application/configure-component.png" /></p>
+<p>The flow for adding an existing application is different to all the commands encounterd so far. First the prompts for an application name and description are shown. Enter these and submit them when you are satisfied with your values. Subatomic will then pull a list of all the repositories in your Bitbucket project and you can select which one is holds the source for the application you wish to use. Once you have made you selection you will be informed that your application is being provisioned.</p>
 <h2 id="jenkins-build"><strong>Jenkins Build</strong></h2>
-<p>The application should now be provisioned and you are presented with an option to kick off a build. Note that if your application did not have a Jenkins build file, Subatomic will generate one for you and add it to your application repository. The message should look as below</p>
+<p>The application should now be provisioned and you are presented with an option to kick off a build. Note that if your application did not have a Jenkins build file, Subatomic will generate one for you and add it to your application repository. The message should looks as below</p>
 <p><img alt="Start Build" src="../../images/user-guide/add-an-application/start-jenkins-build.png" /></p>
-<p>Start the build by choosing the presented option. The jenkins build can also be started by using the command below in your channel</p>
+<p>Start the build by choosing the presented option. The jenkins build can also be start by using the command below in your channel</p>
 <p><code>@atomist sub jenkins build</code></p>
 <blockquote>
 <p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#jenkins-build">here</a></p>
