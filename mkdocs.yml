@@ -34,4 +34,3 @@ pages:
     - 'Add an Application': 'user-guide/add-an-application.md'
 - Quantum Mechanic:
     - 'Command Reference': 'quantum-mechanic/command-reference.md'
-- Tenants: tenants.md

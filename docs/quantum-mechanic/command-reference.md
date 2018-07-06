@@ -63,7 +63,7 @@ Links an application contained within a BitBucket project to the project.
 Links a team to an existing project. 
 
 ### **jenkins build**
-Starts a jenkins build with the current project.
+Starts a jenkins build with the selected project.
 
 ### **configure custom package**
 Configure an existing application/library using custom templates.

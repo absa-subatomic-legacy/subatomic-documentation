@@ -9,7 +9,7 @@ Below is an example of linking the existing application to your project
 
 ![Add Application](/images/user-guide/add-an-application/add-application.png)
 
-The flow for adding an existing application is different to all the commands encounterd so far. First the prompts for an application name and description are shown. Enter these and submit them when you are satisfied with your values. Subatomic will then pull a list of all the repositories in your Bitbucket project and you can select which one holds the source for the application you wish to use. Once you have made your selection you will be informed that your application is being provisioned.
+The flow for adding an existing application is different to all the commands encounterd so far. First the prompts for an application name and description are shown. Enter these and submit them when you are satisfied with your values. Subatomic will then pull a list of all the repositories in your Bitbucket project and you can select which one holds the source for the application you wish to use. Once you have made your selection you will be informed that your application is being created.
 
 ## **Configure Component**
 You will be presented with button to configure your component. Upon selection you will have the option to choose which package definition to use for your project. E.g. for a springboot-1 project you would choose `maven-springboot-1-deployable`. Theses contain predefined definitions, if you would like to specify which components to use rather use the [sub configure custom package](../quantum-mechanic/command-reference.md#configure-custom-package) instead.

@@ -11,6 +11,8 @@ When talking to the Atomist bot in a channel, conversational prompts will occur 
 
 Re-assign the values if necessary and submit when ready.
 
+> Tenants allow projects spanning multiple bitbucket projects, teams and actual business groupings to be connected.
+
 ## **Linking a Bitbucket Project**
 You should now be presented with options to link or create a Bitbucket project to associate to the Subatomic project, and an option to create the necessary OpenShift environments. 
 

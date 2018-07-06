@@ -7,7 +7,6 @@ There are many moving pieces in the Subatomic environment but a users main inter
 
 * [User Guide](user-guide/overview.md) - A tutorial for getting started as an end user of subatomic.
 * [Quantum Mechanic Command Reference](quantum-mechanic/command-reference.md) - A reference guide for using the slack commands in Quantum Mechanic.
-* [Tenants](tenants.md) - A description of what tenants are.
 
 ## **The Subatomic Stack**
 Subatomic is built with a specific core stack in mind. The below list details the environment requirements for running Subatomic.
