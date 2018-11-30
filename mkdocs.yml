@@ -24,7 +24,7 @@ extra:
   social:
     - type: github
       link: https://github.com/absa-subatomic
-pages:
+nav:
 - Home: index.md
 - User Guide:
     - 'Overview': 'user-guide/overview.md'
