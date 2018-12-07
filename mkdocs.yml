@@ -34,3 +34,4 @@ nav:
     - 'Add an Application': 'user-guide/add-an-application.md'
 - Quantum Mechanic:
     - 'Command Reference': 'quantum-mechanic/command-reference.md'
+- Frequently Asked Questions: FAQ.md
