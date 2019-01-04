@@ -9,7 +9,7 @@ An application in Subatomic means a code base that is deployable and can be run 
 
 A library on the other hand is code that is meant to be used by other codebases. An example of such would be a library of math functions that are reused by various applications. When linking or creating a library, only the Jenkins build is created. The user is expected to push the artifact from their Jenkins build into a reusable location such as Nexus for use in other applications.
 
-### ***Common Jenkins buid failures***
+### ***Common Jenkins build failures***
 
 **Error:** `Jenkins fails to pull maven dependencies.`
 
