@@ -23,7 +23,7 @@ This is bug in the current version of Jenkins used. The solution involves rescan
 
 **Possibility 1:** Commands are not running because the automation client or the Gluon backend is not accessible. You will need to contact your Subatomic administrator.
 
-**Possibility 2:** Commands in a particualr team channel are failing because you are either not actually a member of the team, or you dont have the permissions to run an owner specific command. To view the list of team members and owners for a team run `@atomist sub list team members`.
+**Possibility 2:** Commands in a particular team channel are failing because you are either not actually a member of the team, or you dont have the permissions to run an owner specific command. To view the list of team members and owners for a team run `@atomist sub list team members`.
 
 
 ## **Commands**
