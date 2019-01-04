@@ -7,7 +7,7 @@ These are questions that apply in general to Subatomic use.
 ### ***What is the difference between an application and a library?***
 An application in Subatomic means a code base that is deployable and can be run by itself. An example would be a spring boot application, or an angular application. When linking or creating an application, all associated OpenShift resources required to deploy the application will be created along with the Jenkins build. This includes the necessary DeploymentConfig's and a BuildConfig for the application.
 
-A library on the other hand is code that is meant to be used by other codebases. An example of such would be a library of math functions that are reused by various applications. When linking or creating a library, only the Jenkins build is created. The user is expected to push the artifact from their Jenkins build into a reusable location such as nexus for use in other applications.
+A library on the other hand is code that is meant to be used by other codebases. An example of such would be a library of math functions that are reused by various applications. When linking or creating a library, only the Jenkins build is created. The user is expected to push the artifact from their Jenkins build into a reusable location such as Nexus for use in other applications.
 
 ### ***Common Jenkins buid failures***
 
