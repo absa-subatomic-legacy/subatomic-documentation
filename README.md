@@ -19,7 +19,7 @@ $ pip install -r requirements.txt
 ```
 
 Once the dependencies are installed, you can start a local server to view the
-docs:
+docs: 
 
 ```
 $ mkdocs serve

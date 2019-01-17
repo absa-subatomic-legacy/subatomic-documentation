@@ -8,7 +8,9 @@ A conversation guiding you through the requirements for onboarding your user is 
 
 ![Onboarding Conversation](/images/user-guide/onboarding/onboarding-command.png)
 
-At this point you are presented with an overview of the values you have entered. If you are happy with what you have entered either click the "Submit" button or respond with `submit` to proceed. If you wish to change a value respond with `set [parameter] [value]`. E.g. to change the first name of the user respond with `set firstName My New First Name` and then submit at the next prompt to do so. Please note that this process of submission/reassignment can be followed for all commands in subatomic.
+At this point you are presented with an overview of the values you have entered. If you are happy with what you have entered either click the "Submit" button or respond with `submit` to proceed.
+ 
+ If you wish to change a value respond with `set [parameter] [value]`. E.g. to change the first name of the user respond with `set firstName My New First Name` and then submit at the next prompt to do so. Please note that this process of submission/reassignment can be followed for all commands in subatomic.
 
 After submitting you will be presented with a prompt about joining or creating a team as seen below
 
