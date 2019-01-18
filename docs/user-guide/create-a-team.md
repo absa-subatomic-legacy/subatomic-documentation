@@ -47,7 +47,7 @@ Select the channel just created in the Slack Channel menu.
 
 Below shows the welcome message sent by the Atomist bot when it joins your channel
 
-![Atomist Joins](/images/user-guide/create-a-team/atomist-joins.png) You can now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of direct messages to the atomist bot)
+![Atomist Joins](/images/user-guide/create-a-team/CreateDevOpsPrompt.png) You can now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of direct messages to the atomist bot)
 
 `@atomist sub request devops environment`
 
@@ -57,17 +57,15 @@ A message is shown when provisioning starts and a step by step status message is
 
 ![Atomist status request DevOps](/images/user-guide/create-a-team/request-devops.png)
 
+Once the DevOps provisioning is complete the team channel is updated with a message detailing possible next steps as seen below
+
+![Post DevOps Steps](/images/user-guide/create-a-team/ProvisionDevOpsSuccess.png)
 
 When the provisioning is complete your team will have a DevOps project created inside Openshift.
  
- ![Atomist Joins](/images/user-guide/create-a-team/atomist-joins.png)
  This project hosts your jenkins master along with a possible config server that will be used by your team's applications. Permissions for all members of your team are automatically configured. Below shows an example of the Openshift DevOps project overview
 
 ![DevOps Environment](/images/user-guide/create-a-team/devops-env-created.png)
-
-The team channel is updated with a message detailing possible next steps as seen below
-
-![Post DevOps Steps](/images/user-guide/create-a-team/devops-slack-message.png)
 
 For this guide proceed by clicking the "Create project" button and proceed to [Create a Project](./create-a-project.md)
 
