@@ -7,16 +7,16 @@ At this point in the guide you should have been presented with a prompt to creat
 
 When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for your project. An example of this is seen below
 
-![Project Creation](/images/user-guide/create-a-project/create-a-project.png)
+![Project Creation](/images/user-guide/create-a-project/CreateNewProject.png)
 
 Re-assign the values if necessary and submit when ready.
 
 > Tenants allow projects spanning multiple bitbucket projects, teams and actual business groupings to be connected.
 
 ## **Linking a Bitbucket Project**
-You should now be presented with options to link or create a Bitbucket project to associate to the Subatomic project, and an option to create the necessary OpenShift environments. 
+You should now be presented with options to link a Bitbucket project to associate to the Subatomic project and an option to associate other teams to this Subatomic project.
 
-![Post Project Creation](/images/user-guide/create-a-project/post-project-creation.png)
+![Post Project Creation](/images/user-guide/create-a-project/LinkProjectCreated.png)
 
 Choose the option to link an existing Bitbucket project. This can also be invoked using the command below in the channel
 
@@ -28,19 +28,22 @@ Choose the option to link an existing Bitbucket project. This can also be invoke
 
 Follow the prompts to link the bitbucket project. An example is shown below
 
-![Link Bitbucket](/images/user-guide/create-a-project/link-bitbucket-project.png)
+![Link Bitbucket](/images/user-guide/create-a-project/BitbucketProjectKey.png)
 
-Note that the Bitbucket project key is pulled from the URL of the project. The URL shown when browsing the Test project above is as follows with the project key highlighted
+Note that the Bitbucket project key is pulled from the URL of the project. The URL shown when browsing the PROJ project above is as follows with the project key highlighted
 
-![Bitbucket URL](/images/user-guide/create-a-project/bitbucket-url.png)
+![Bitbucket URL](/images/user-guide/create-a-project/PROJKey.png)
 
-Submit the command and you should be informed once the Bitbucket project has been configured. The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. 
+Submit the command and you should be informed once the Bitbucket project has been configured.
+![Configure Bitbucket Project](/images/user-guide/create-a-project/ConfiguredBitbucketProject.png)
+
+The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. 
 
 ## **Create OpenShift Environments**
 
 You should now be prompted to create the associated Openshift environments for the project
 
-![Post Link Bitbucket](/images/user-guide/create-a-project/post-link-bitbucket.png)
+![Post Link Bitbucket](/images/user-guide/create-a-project/CreateOpenShiftEnvs.png)
 
 Click the "Create OpenShift environments" button. This command can also be invoked using the command below in the team channel
 
@@ -48,7 +51,12 @@ Click the "Create OpenShift environments" button. This command can also be invok
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-project-environments)
 
-You will be notified that your Openshift environments are being provisioned and once they are complete they should be visible in your Openshift instance.
+You will be notified that your Openshift environments are being provisioned successfully.
+
+![Openshift Environments Created OK](/images/user-guide/create-a-project/EnvsCreated.png)
+ 
+ 
+Once they are complete they should be visible in your Openshift instance.
 
 ![Openshift Environments](/images/user-guide/create-a-project/openshift-environments.png)
 
