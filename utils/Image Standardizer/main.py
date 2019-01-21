@@ -2,8 +2,11 @@ import glob
 from PIL import Image
 import pathlib
 
-input_dir = "/Users/kieranbristow/Workspace/Subatomic/subatomic-documentation/docs/images/user-guide/"
-exclude = ["devops-env-created.png", "bitbucket-url.png", "openshift-environments.png"]
+# directory to scan
+input_dir = "/Users/andre/Projects/Subatomic/subatomic-documentation/docs/images/user-guide/onboarding/"
+
+# images to exclude in dir
+exclude = []
 
 max_width = 0
 max_image = ""
