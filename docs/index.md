@@ -1,5 +1,5 @@
 <div style="border: 0px solid red;">
-  <img style="vertical-align:middle;border: 0px solid red;" src="/images//subatomic-logo-colour.png" width="100px">
+  <img style="vertical-align:middle;border: 0px solid red;" src="/images/subatomic-logo-colour.png" width="100px">
   <span style="font-size:30px;;border: 0px solid red;">Welcome to Subatomic</span>
 </div>
 
