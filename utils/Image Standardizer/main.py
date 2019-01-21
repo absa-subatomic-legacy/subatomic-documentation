@@ -2,10 +2,10 @@ import glob
 from PIL import Image
 import pathlib
 
-# directory to scan
+# Specify the directory to scan
 input_dir = "/Users/andre/Projects/Subatomic/subatomic-documentation/docs/images/user-guide/onboarding/"
 
-# images to exclude in dir
+# List the images to exclude
 exclude = []
 
 max_width = 0
