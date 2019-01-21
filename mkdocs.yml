@@ -1,12 +1,12 @@
-site_name: Subatomic
+site_name: Subatomic User Docs
 site_author: The Subatomic Team
 site_description: Subatomic
-copyright: '&copy; 2018 Subatomic Team'
+copyright: '&copy; 2019 Subatomic Team'
 
 # Configuration
 theme:
   name: material
-  logo: 'images/subatomic.svg'
+  logo: 'images/subatomic-white-grey_50.png'
   palette:
     primary: 'red'
     accent: 'red'
@@ -26,12 +26,12 @@ extra:
       link: https://github.com/absa-subatomic
 nav:
 - Home: index.md
-- User Guide:
-    - 'Overview': 'user-guide/overview.md'
-    - 'User Onboarding': 'user-guide/onboarding.md'
-    - 'Create a Team': 'user-guide/create-a-team.md'
-    - 'Create a Project': 'user-guide/create-a-project.md'
-    - 'Add an Application': 'user-guide/add-an-application.md'
-- Quantum Mechanic:
-    - 'Command Reference': 'quantum-mechanic/command-reference.md'
+- User Guides:
+    - '1. Overview': 'user-guide/overview.md'
+    - '2. User Onboarding': 'user-guide/onboarding.md'
+    - '3. Create a Team': 'user-guide/create-a-team.md'
+    - '4. Create a Project': 'user-guide/create-a-project.md'
+    - '5. Link an Application': 'user-guide/add-an-application.md'
+- Command Quick Reference: 'quantum-mechanic/command-reference.md'
 - Frequently Asked Questions: FAQ.md
+- Developer Docs: FAQ.md

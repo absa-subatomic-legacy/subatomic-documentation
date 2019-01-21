@@ -1,4 +1,4 @@
-# **Add an Application**
+# **Link an Application**
 At this point in the guide you should have been presented with a prompt to link an existing application to your project. You should have arrived at this point through the conversational prompts presented after creating a project. Note that you can also link an existing application using the command below in your team channel
 
 `@atomist sub link application`
@@ -18,7 +18,11 @@ You will be presented with button to configure your component. Upon selection yo
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#configure-package)
 
-![Add Application](/images/user-guide/add-an-application/configure-component.png)
+![Configure Component](/images/user-guide/add-an-application/configure-component.png)
+
+Upon completion of the configuration you will see the following type of message:
+
+![Configuring Application](/images/user-guide/add-an-application/ConfiguringPackage.png)
 
 ## **Jenkins Build**
 The application should now be provisioned and you are presented with an option to kick off a build. Note that if your application did not have a Jenkins build file, Subatomic will generate one for you and add it to your application repository. The message should look as below
@@ -32,3 +36,5 @@ Start the build by choosing the presented option. The jenkins build can also be 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#jenkins-build)
 
 You should be notified that your application is now being built. The build is started using your Jenkins master instance in your DevOps environment. The link to your jenkins instance can be found in the DevOps environment and logging into the instance will then allow you to track/promote and deploy your builds.
+
+![Jenkins Build Complete](/images/user-guide/add-an-application/JenkinsBuild.png)
