@@ -6,7 +6,7 @@ import pathlib
 input_dir = "/Users/andre/Projects/Subatomic/subatomic-documentation/docs/images/user-guide/onboarding/"
 
 # List the images to exclude
-exclude = []
+exclude = ["jenkins-build.png","proj-key.png","openshift-environments"]
 
 max_width = 0
 max_image = ""
