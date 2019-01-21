@@ -61,7 +61,7 @@ Team commands allow you to manage your Subatomic team. These include team member
 8. `sub list team members` - Displays members and owners of the team.
 9. `sub team migrate cloud` - Move all Openshift resources belonging to a team to a different cloud
 10. `sub request devops environment` - Check whether to create a new OpenShift DevOps environment or use an existing one
-11. `sub create team channel` - This will create a public slack channel, if you want a private channel you will need to create it manually then proceed to [sub link team channel](./command-reference.md#link-team-channel).
+11. `sub create team channel` - This will create a public slack channel, if you want a private channel you will need to create it manually then run  `sub link team channel` command above (7).
 12. `sub remove team member` - Removes a member (not owner) from a team.
 13. `sub tag all images` - Tag all latest subatomic images to a devops environment
 14. `sub tag image` - Tag an individual subatomic image to a devops environment
