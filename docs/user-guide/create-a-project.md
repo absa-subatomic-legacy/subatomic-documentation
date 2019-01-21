@@ -3,7 +3,7 @@ At this point in the guide you should have been presented with a prompt to creat
 
 `@atomist sub create project`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-project)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for your project. An example of this is seen below
 
@@ -22,9 +22,7 @@ Choose the option to link an existing Bitbucket project. This can also be invoke
 
 `@atomist sub link bitbucket project`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#link-bitbucket-project)
-
-> For details on creating a new Bitbucket project see the [documentation](../quantum-mechanic/command-reference.md#create-bitbucket-project)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 Follow the prompts to link the bitbucket project. An example is shown below
 
@@ -49,7 +47,7 @@ Click the "Create OpenShift environments" button. This command can also be invok
 
 `@atomist sub request project environments`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-project-environments)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 You will be notified that your Openshift environments are being provisioned successfully.
 
@@ -70,4 +68,4 @@ Once the project environments are provisioned you should be prompted to create a
 
 Choose to link an existing application and proceed to [Add an Application](./add-an-application).
 
-> For details on linking an existing library see the [documentation](../quantum-mechanic/command-reference.md#link-library)
+> For details on linking an existing library see the [documentation](../quantum-mechanic/command-reference.md#project-commands)

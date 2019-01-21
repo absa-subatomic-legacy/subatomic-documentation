@@ -3,7 +3,7 @@ At this point in the guide you should have been presented with a prompt to creat
 
 `sub create team`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 After invoking the team creation command follow the prompts and enter the details for the team as required. Below is an example of creating a team
 
@@ -30,13 +30,13 @@ A slack channel can also be created using the command
 
 `sub create team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 Alternatively an existing channel can also be linked using the command
 
 `sub link team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#link-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 The slack channel is then automatically created and the Atomist bot is invited. 
 
@@ -51,7 +51,7 @@ Below shows the welcome message sent by the Atomist bot when it joins your chann
 
 `@atomist sub request devops environment`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-devops-environment)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 A message is shown when provisioning starts and a step by step status message is shown:
 
@@ -69,4 +69,4 @@ When the provisioning is complete your team will have a DevOps project created i
 
 For this guide proceed by clicking the "Create project" button and proceed to [Create a Project](./create-a-project.md)
 
-> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference.md#add-config-server)
+> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference.md#team-commands)

@@ -1,19 +1,19 @@
 # **Quantum Mechanic**
 Below are the commands and their explanations that you'll encounter while using Subatomic:
 
-###  1. Bitbucket Commands (1)
+###  **Bitbucket Commands**
 Bitbucket commands that control Bitbucket project configuration and access controls
 
 1. `````sub apply bitbucket practices````` - Apply recommended practices to Bitbucket project
 
-###  2. Jenkins Commands (3)
+###  **Jenkins Commands**
 Jenkins commands that allow the user to control builds and jenkins configuration
 
 1. ```sub configure application jenkins prod``` - Add a prod deployment job to jenkins for an application
 2. ```sub create jenkins bitbucket credentials``` - Recreate the Jenkins Bitbucket Credentials
 3. ```sub jenkins build``` - Kick off a Jenkins build
 
-###  3. Member Commands (4)
+###  **Member Commands**
 Member commands allow you to manage Subatomic members. These include editing Slack details, on-boarding, editing user roles and adding members to teams.
 
 1. ```sub add team member``` - Add a member to a team
@@ -22,7 +22,7 @@ Member commands allow you to manage Subatomic members. These include editing Sla
 4. ```sub onboard me``` - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your `first name`, `last name`, `email address` and `domain username`. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click [here](../user-guide/onboarding.md)
 
 
-###  4. Package Commands (6)
+###  **Package Commands**
 Package commands are related to managing applications and libraries. These include deployment, build, prod promotion and image management.
 
 1. ```sub configure application jenkins prod``` - Add a prod deployment job to jenkins for an application
@@ -32,7 +32,7 @@ Package commands are related to managing applications and libraries. These inclu
 5. ```sub link application``` - Link an existing application
 6. ```sub patch package s2i image``` - Patch the s2i image used to build a package
 
-###  5. Project Commands (12)
+###  **Project Commands**
 Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, jenkins and Bitbucket configuration.
 
 1. `sub associate team` - Add additional team/s to a project
@@ -48,7 +48,7 @@ Project commands provide management capabilities around individual Projects and 
 11. `sub list projects` - List projects belonging to a team
 12. `sub request project environments` - Create new OpenShift environments for a project
 
-###  6. Team Commands (14)
+###  **Team Commands**
 Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.
 
 1. `sub add config server` - Add a new Subatomic Config Server
@@ -66,7 +66,7 @@ Team commands allow you to manage your Subatomic team. These include team member
 13. `sub tag all images` - Tag all latest subatomic images to a devops environment
 14. `sub tag image` - Tag an individual subatomic image to a devops environment
 
-###  7. Other Commands (3)
+###  **Other Commands**
 All other general/miscellaneous commands
 
 1. `sub create openshift pvc` - Create a new OpenShift Persistent Volume Claim
