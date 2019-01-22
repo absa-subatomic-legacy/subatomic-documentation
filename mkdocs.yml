@@ -1,7 +1,7 @@
 site_name: Subatomic User Docs
 site_author: The Subatomic Team
 site_description: Subatomic
-copyright: '&copy; 2019 Subatomic Team'
+copyright: '| &copy; 2019 Subatomic Team |'
 
 # Configuration
 theme:
