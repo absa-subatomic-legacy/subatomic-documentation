@@ -413,7 +413,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../FAQ/" title="Developer Docs" class="md-nav__link">
+    <a href="../../developer/" title="Developer Docs" class="md-nav__link">
       Developer Docs
     </a>
   </li>
@@ -476,7 +476,7 @@
 <p>At this point in the guide you should have been presented with a prompt to link an existing application to your project. You should have arrived at this point through the conversational prompts presented after creating a project. Note that you can also link an existing application using the command below in your team channel</p>
 <p><code>@atomist sub link application</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#link-application">here</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#package-commands">here</a></p>
 </blockquote>
 <p>Below is an example of linking the existing application to your project</p>
 <p><img alt="Add Application" src="/images/user-guide/add-an-application/add-application.png" /></p>
@@ -485,21 +485,21 @@
 <p>You will be presented with button to configure your component. Upon selection you will have the option to choose which package definition to use for your project. E.g. for a springboot-1 project you would choose <code>maven-springboot-1-deployable</code>. Theses contain predefined definitions, if you would like to specify which components to use rather use the <a href="../../quantum-mechanic/command-reference/#configure-custom-package">sub configure custom package</a> instead.</p>
 <p><code>@atomist sub configure package</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#configure-package">here</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#package-commands">here</a></p>
 </blockquote>
 <p><img alt="Configure Component" src="/images/user-guide/add-an-application/configure-component.png" /></p>
 <p>Upon completion of the configuration you will see the following type of message:</p>
-<p><img alt="Configuring Application" src="/images/user-guide/add-an-application/ConfiguringPackage.png" /></p>
+<p><img alt="Configuring Application" src="/images/user-guide/add-an-application/configuring-package.png" /></p>
 <h2 id="jenkins-build"><strong>Jenkins Build</strong></h2>
 <p>The application should now be provisioned and you are presented with an option to kick off a build. Note that if your application did not have a Jenkins build file, Subatomic will generate one for you and add it to your application repository. The message should look as below</p>
 <p><img alt="Start Build" src="/images/user-guide/add-an-application/start-jenkins-build.png" /></p>
 <p>Start the build by choosing the presented option. The jenkins build can also be started by using the command below in your channel</p>
 <p><code>@atomist sub jenkins build</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#jenkins-build">here</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#jenkins-commands">here</a></p>
 </blockquote>
 <p>You should be notified that your application is now being built. The build is started using your Jenkins master instance in your DevOps environment. The link to your jenkins instance can be found in the DevOps environment and logging into the instance will then allow you to track/promote and deploy your builds.</p>
-<p><img alt="Jenkins Build Complete" src="/images/user-guide/add-an-application/JenkinsBuild.png" /></p>
+<p><img alt="Jenkins Build Complete" src="/images/user-guide/add-an-application/jenkins-build.png" /></p>
                 
                   
                 

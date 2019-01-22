@@ -420,7 +420,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../FAQ/" title="Developer Docs" class="md-nav__link">
+    <a href="../../developer/" title="Developer Docs" class="md-nav__link">
       Developer Docs
     </a>
   </li>
@@ -490,40 +490,39 @@
 <p>At this point in the guide you should have been presented with a prompt to create a new project. You should have arrived at this point through the conversational prompts presented after creating your team and associated a slack channel to it. Note that project creation can also be invoked through the command run in your team channel as below</p>
 <p><code>@atomist sub create project</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#create-project">here</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#project-commands">here</a></p>
 </blockquote>
 <p>When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for your project. An example of this is seen below</p>
-<p><img alt="Project Creation" src="/images/user-guide/create-a-project/CreateNewProject.png" /></p>
+<p><img alt="Project Creation" src="/images/user-guide/create-a-project/create-new-project.png" /></p>
 <p>Re-assign the values if necessary and submit when ready.</p>
 <blockquote>
 <p>Tenants allow projects spanning multiple bitbucket projects, teams and actual business groupings to be connected.</p>
 </blockquote>
 <h2 id="linking-a-bitbucket-project"><strong>Linking a Bitbucket Project</strong></h2>
 <p>You should now be presented with options to link a Bitbucket project to associate to the Subatomic project and an option to associate other teams to this Subatomic project.</p>
-<p><img alt="Post Project Creation" src="/images/user-guide/create-a-project/LinkProjectCreated.png" /></p>
+<p><img alt="Post Project Creation" src="/images/user-guide/create-a-project/link-project-created.png" /></p>
 <p>Choose the option to link an existing Bitbucket project. This can also be invoked using the command below in the channel</p>
 <p><code>@atomist sub link bitbucket project</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#link-bitbucket-project">here</a></p>
-<p>For details on creating a new Bitbucket project see the <a href="../../quantum-mechanic/command-reference/#create-bitbucket-project">documentation</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#project-commands">here</a></p>
 </blockquote>
 <p>Follow the prompts to link the bitbucket project. An example is shown below</p>
-<p><img alt="Link Bitbucket" src="/images/user-guide/create-a-project/BitbucketProjectKey.png" /></p>
+<p><img alt="Link Bitbucket" src="/images/user-guide/create-a-project/bitbucket-project-key.png" /></p>
 <p>Note that the Bitbucket project key is pulled from the URL of the project. The URL shown when browsing the PROJ project above is as follows with the project key highlighted</p>
-<p><img alt="Bitbucket URL" src="/images/user-guide/create-a-project/PROJKey.png" /></p>
+<p><img alt="Bitbucket URL" src="/images/user-guide/create-a-project/proj-Key.png" /></p>
 <p>Submit the command and you should be informed once the Bitbucket project has been configured.
-<img alt="Configure Bitbucket Project" src="/images/user-guide/create-a-project/ConfiguredBitbucketProject.png" /></p>
+<img alt="Configure Bitbucket Project" src="/images/user-guide/create-a-project/configured-bitbucket-project.png" /></p>
 <p>The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. </p>
 <h2 id="create-openshift-environments"><strong>Create OpenShift Environments</strong></h2>
 <p>You should now be prompted to create the associated Openshift environments for the project</p>
-<p><img alt="Post Link Bitbucket" src="/images/user-guide/create-a-project/CreateOpenShiftEnvs.png" /></p>
+<p><img alt="Post Link Bitbucket" src="/images/user-guide/create-a-project/create-openshift-envs.png" /></p>
 <p>Click the "Create OpenShift environments" button. This command can also be invoked using the command below in the team channel</p>
 <p><code>@atomist sub request project environments</code></p>
 <blockquote>
-<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#request-project-environments">here</a></p>
+<p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#project-commands">here</a></p>
 </blockquote>
 <p>You will be notified that your Openshift environments are being provisioned successfully.</p>
-<p><img alt="Openshift Environments Created OK" src="/images/user-guide/create-a-project/EnvsCreated.png" /></p>
+<p><img alt="Openshift Environments Created OK" src="/images/user-guide/create-a-project/envs-created.png" /></p>
 <p>Once they are complete they should be visible in your Openshift instance.</p>
 <p><img alt="Openshift Environments" src="/images/user-guide/create-a-project/openshift-environments.png" /></p>
 <p>Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.</p>
@@ -532,7 +531,7 @@
 <p><img alt="Create Application" src="/images/user-guide/create-a-project/create-an-application.png" /></p>
 <p>Choose to link an existing application and proceed to <a href="./add-an-application">Add an Application</a>.</p>
 <blockquote>
-<p>For details on linking an existing library see the <a href="../../quantum-mechanic/command-reference/#link-library">documentation</a></p>
+<p>For details on linking an existing library see the <a href="../../quantum-mechanic/command-reference/#project-commands">documentation</a></p>
 </blockquote>
                 
                   
