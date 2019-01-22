@@ -34,4 +34,4 @@ nav:
     - '5. Link an Application': 'user-guide/add-an-application.md'
 - Command Quick Reference: 'quantum-mechanic/command-reference.md'
 - Frequently Asked Questions: FAQ.md
-- Developer Docs: FAQ.md
+- Developer Docs: 'developer.md'

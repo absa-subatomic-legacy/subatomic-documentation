@@ -2,7 +2,7 @@
 Before doing anything on Subatomic, a user needs to be onboarded onto the system to provide context for any commands issued to Quantum Mechanic. To begin the onboarding process open a direct message slack conversation the the Atomist bot.  the following command
 
 `sub onboard me`
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#onboard-me)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#member-commands)
 
 A conversation guiding you through the requirements for onboarding your user is started. Follow the prompts and enter the details requested. Below is an example of onboarding
 
@@ -18,4 +18,4 @@ After submitting you will be presented with a prompt about joining or creating a
 
 For the purpose of this tutorial, click the "Create a new team" button and proceed to the [Create a Team](./create-a-team.md) section.
 
-> If you are not a team lead and are instead joining an existing team, click the "Apply to join a team" button and see the related [documentation](../quantum-mechanic/command-reference.md#apply-to-team).
+> If you are not a team lead and are instead joining an existing team, click the "Apply to join a team" button and see the related [documentation](../quantum-mechanic/command-reference.md#team-commands).

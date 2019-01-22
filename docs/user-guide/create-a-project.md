@@ -3,11 +3,11 @@ At this point in the guide you should have been presented with a prompt to creat
 
 `@atomist sub create project`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-project)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 When talking to the Atomist bot in a channel, conversational prompts will occur in a thread. Follow the prompts and enter the necessary values for your project. An example of this is seen below
 
-![Project Creation](/images/user-guide/create-a-project/CreateNewProject.png)
+![Project Creation](/images/user-guide/create-a-project/create-new-project.png)
 
 Re-assign the values if necessary and submit when ready.
 
@@ -16,26 +16,24 @@ Re-assign the values if necessary and submit when ready.
 ## **Linking a Bitbucket Project**
 You should now be presented with options to link a Bitbucket project to associate to the Subatomic project and an option to associate other teams to this Subatomic project.
 
-![Post Project Creation](/images/user-guide/create-a-project/LinkProjectCreated.png)
+![Post Project Creation](/images/user-guide/create-a-project/link-project-created.png)
 
 Choose the option to link an existing Bitbucket project. This can also be invoked using the command below in the channel
 
 `@atomist sub link bitbucket project`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#link-bitbucket-project)
-
-> For details on creating a new Bitbucket project see the [documentation](../quantum-mechanic/command-reference.md#create-bitbucket-project)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 Follow the prompts to link the bitbucket project. An example is shown below
 
-![Link Bitbucket](/images/user-guide/create-a-project/BitbucketProjectKey.png)
+![Link Bitbucket](/images/user-guide/create-a-project/bitbucket-project-key.png)
 
 Note that the Bitbucket project key is pulled from the URL of the project. The URL shown when browsing the PROJ project above is as follows with the project key highlighted
 
-![Bitbucket URL](/images/user-guide/create-a-project/PROJKey.png)
+![Bitbucket URL](/images/user-guide/create-a-project/proj-Key.png)
 
 Submit the command and you should be informed once the Bitbucket project has been configured.
-![Configure Bitbucket Project](/images/user-guide/create-a-project/ConfiguredBitbucketProject.png)
+![Configure Bitbucket Project](/images/user-guide/create-a-project/configured-bitbucket-project.png)
 
 The configuration involves giving access to all members in your team access, and setting default merge checks and default reviewers for the project. 
 
@@ -43,17 +41,17 @@ The configuration involves giving access to all members in your team access, and
 
 You should now be prompted to create the associated Openshift environments for the project
 
-![Post Link Bitbucket](/images/user-guide/create-a-project/CreateOpenShiftEnvs.png)
+![Post Link Bitbucket](/images/user-guide/create-a-project/create-openshift-envs.png)
 
 Click the "Create OpenShift environments" button. This command can also be invoked using the command below in the team channel
 
 `@atomist sub request project environments`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-project-environments)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
 You will be notified that your Openshift environments are being provisioned successfully.
 
-![Openshift Environments Created OK](/images/user-guide/create-a-project/EnvsCreated.png)
+![Openshift Environments Created OK](/images/user-guide/create-a-project/envs-created.png)
  
  
 Once they are complete they should be visible in your Openshift instance.
@@ -70,4 +68,4 @@ Once the project environments are provisioned you should be prompted to create a
 
 Choose to link an existing application and proceed to [Add an Application](./add-an-application).
 
-> For details on linking an existing library see the [documentation](../quantum-mechanic/command-reference.md#link-library)
+> For details on linking an existing library see the [documentation](../quantum-mechanic/command-reference.md#project-commands)

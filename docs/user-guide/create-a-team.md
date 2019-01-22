@@ -3,7 +3,7 @@ At this point in the guide you should have been presented with a prompt to creat
 
 `sub create team`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 After invoking the team creation command follow the prompts and enter the details for the team as required. Below is an example of creating a team
 
@@ -12,7 +12,7 @@ After invoking the team creation command follow the prompts and enter the detail
 The values entered can be modified or submitted as before. Submitting the values creates and stores a new team with nothing associated to it within the Subatomic environment. 
 
 You will now be prompted to choose a cloud to create this team in. 
-![Choose a cloud](/images/user-guide/create-a-team/choose a cloud.png)
+![Choose a cloud](/images/user-guide/create-a-team/choose-a-cloud.png)
 
 
 After your cloud selection the command will process and you should receive a success message.
@@ -30,13 +30,13 @@ A slack channel can also be created using the command
 
 `sub create team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#create-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 Alternatively an existing channel can also be linked using the command
 
 `sub link team channel`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#link-team-channel)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 The slack channel is then automatically created and the Atomist bot is invited. 
 
@@ -47,11 +47,11 @@ Select the channel just created in the Slack Channel menu.
 
 Below shows the welcome message sent by the Atomist bot when it joins your channel
 
-![Atomist Joins](/images/user-guide/create-a-team/CreateDevOpsPrompt.png) You can now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of direct messages to the atomist bot)
+![Atomist Joins](/images/user-guide/create-a-team/create-devops-prompt.png) You can now provision your DevOps environment by clicking on the "Create DevOps environment" button. This command can also be invoked using the command (note the `@atomist` prefix, which is required when sending commands in a channel instead of direct messages to the atomist bot)
 
 `@atomist sub request devops environment`
 
-> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#request-devops-environment)
+> For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#team-commands)
 
 A message is shown when provisioning starts and a step by step status message is shown:
 
@@ -59,7 +59,7 @@ A message is shown when provisioning starts and a step by step status message is
 
 Once the DevOps provisioning is complete the team channel is updated with a message detailing possible next steps as seen below
 
-![Post DevOps Steps](/images/user-guide/create-a-team/ProvisionDevOpsSuccess.png)
+![Post DevOps Steps](/images/user-guide/create-a-team/provision-devops-success.png)
 
 When the provisioning is complete your team will have a DevOps project created inside Openshift.
  
@@ -69,4 +69,4 @@ When the provisioning is complete your team will have a DevOps project created i
 
 For this guide proceed by clicking the "Create project" button and proceed to [Create a Project](./create-a-project.md)
 
-> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference.md#add-config-server)
+> For details on adding a config server see the [documentation](../quantum-mechanic/command-reference.md#team-commands)
