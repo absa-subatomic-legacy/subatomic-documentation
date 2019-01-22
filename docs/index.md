@@ -24,11 +24,7 @@ Below are some links to help a user getting started with the system.
 ## **The Subatomic Stack**
 Subatomic is built with a specific core service stack in mind. The below list details the 3rd party software required for running Subatomic.
 
-<a href="https://www.openshift.com" target="_blank"><img src="/images//openshift-logo-long.png" width="150px"></a>" <br/>Red Hat® OpenShift is a container application platform that brings docker and Kubernetes to the enterprise". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through Subatomic.
-
-* [Openshift](https://www.openshift.com/) - "Red Hat® OpenShift is a container application platform that brings docker and Kubernetes to the enterprise". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through subatomic.
-* [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) - Subatomic's primary market is large development teams and naturally this tends towards large organizational environments. The Atlassian stack is common place in such environments and as such Bitbucket Server is currently the only supported source control system supported in Subatomic.
-* [Slack](https://slack.com/) - Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the [Atomist](https://atomist.com/) framework.
+<a href="https://www.openshift.com" target="_blank"><img src="/images//openshift-logo-long.png" width="150px"></a> <br/>Red Hat® OpenShift is a container application platform that brings docker and Kubernetes to the enterprise". Openshift is used to provision environments for new projects and as a home for the associated CI/CD pipelines created through Subatomic.
 
 <a href="https://slack.com"  target="_blank"><img src="/images//slack-logo.png" width=130px"></a> <br/>Slack is a cloud-based set of proprietary team collaboration tools and services. Slack is the primary means for interaction with the Subatomic system through the ChatOps style Quantum Mechanic interface. It is important to note that Quantum Mechanic is built using the <a href="https://atomist.com/" target="_blank">Atomist</a> framework.
 
