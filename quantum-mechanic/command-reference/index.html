@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -66,6 +66,12 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+    
+      
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107338053-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-107338053-1")</script>
+      
     
     
   </head>
@@ -553,6 +559,7 @@
 <li><code>sub configure application jenkins prod</code> - Add a prod deployment job to jenkins for an application</li>
 <li><code>sub create jenkins bitbucket credentials</code> - Recreate the Jenkins Bitbucket Credentials</li>
 <li><code>sub jenkins build</code> - Kick off a Jenkins build</li>
+<li><code>sub project request jenkins job</code> - Creates a jenkins build folder for a given project</li>
 </ol>
 <h3 id="member-commands"><strong>Member Commands</strong></h3>
 <p>Member commands allow you to manage Subatomic members. These include editing Slack details, on-boarding, editing user roles and adding members to teams.</p>
@@ -587,6 +594,7 @@
 <li><code>sub link bitbucket project</code> - You will need to input your <code>bitbucket project key</code> and Subatomic will find the existing project within Bitbucket.</li>
 <li><code>sub list projects</code> - List projects belonging to a team</li>
 <li><code>sub request project environments</code> - Create new OpenShift environments for a project</li>
+<li><code>sub project request jenkins job</code> - Creates a jenkins build folder for a given project</li>
 </ol>
 <h3 id="team-commands"><strong>Team Commands</strong></h3>
 <p>Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.</p>
@@ -695,15 +703,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../../assets/javascripts/application.a353778b.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-107338053-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>
