@@ -4,33 +4,34 @@ Below are the commands and their explanations that you'll encounter while using 
 ###  **Bitbucket Commands**
 Bitbucket commands that control Bitbucket project configuration and access controls
 
-1. `````sub apply bitbucket practices````` - Apply recommended practices to Bitbucket project
+1. `sub apply bitbucket practices` - Apply recommended practices to Bitbucket project
 
 ###  **Jenkins Commands**
 Jenkins commands that allow the user to control builds and jenkins configuration
 
-1. ```sub configure application jenkins prod``` - Add a prod deployment job to jenkins for an application
-2. ```sub create jenkins bitbucket credentials``` - Recreate the Jenkins Bitbucket Credentials
-3. ```sub jenkins build``` - Kick off a Jenkins build
+1. `sub configure application jenkins prod` - Add a prod deployment job to jenkins for an application
+2. `sub create jenkins bitbucket credentials` - Recreate the Jenkins Bitbucket Credentials
+3. `sub jenkins build` - Kick off a Jenkins build
+4. `sub project request jenkins job` - Creates a jenkins build folder for a given project
 
 ###  **Member Commands**
 Member commands allow you to manage Subatomic members. These include editing Slack details, on-boarding, editing user roles and adding members to teams.
 
-1. ```sub add team member``` - Add a member to a team
-2. ```sub add team owner``` - Add a member as an owner to a team
-3. ```sub add slack``` - Add Slack details to an existing team member
-4. ```sub onboard me``` - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your `first name`, `last name`, `email address` and `domain username`. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click [here](../user-guide/onboarding.md)
+1. `sub add team member` - Add a member to a team
+2. `sub add team owner` - Add a member as an owner to a team
+3. `sub add slack` - Add Slack details to an existing team member
+4. `sub onboard me` - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your `first name`, `last name`, `email address` and `domain username`. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click [here](../user-guide/onboarding.md)
 
 
 ###  **Package Commands**
 Package commands are related to managing applications and libraries. These include deployment, build, prod promotion and image management.
 
-1. ```sub configure application jenkins prod``` - Add a prod deployment job to jenkins for an application
-2. ```sub configure package``` - Configure an existing application/library using a predefined template
-3. ```sub configure custom package``` - Configure an existing application/library
-4. ```sub request application prod``` - Create application in prod
-5. ```sub link application``` - Link an existing application
-6. ```sub patch package s2i image``` - Patch the s2i image used to build a package
+1. `sub configure application jenkins prod` - Add a prod deployment job to jenkins for an application
+2. `sub configure package` - Configure an existing application/library using a predefined template
+3. `sub configure custom package` - Configure an existing application/library
+4. `sub request application prod` - Create application in prod
+5. `sub link application` - Link an existing application
+6. `sub patch package s2i image` - Patch the s2i image used to build a package
 
 ###  **Project Commands**
 Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, jenkins and Bitbucket configuration.
@@ -47,6 +48,7 @@ Project commands provide management capabilities around individual Projects and 
 10. `sub link bitbucket project` - You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 11. `sub list projects` - List projects belonging to a team
 12. `sub request project environments` - Create new OpenShift environments for a project
+13. `sub project request jenkins job` - Creates a jenkins build folder for a given project
 
 ###  **Team Commands**
 Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.
