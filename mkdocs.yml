@@ -32,6 +32,6 @@ nav:
     - '3. Create a Team': 'user-guide/create-a-team.md'
     - '4. Create a Project': 'user-guide/create-a-project.md'
     - '5. Link an Application': 'user-guide/add-an-application.md'
-- Command Quick Reference: 'quantum-mechanic/command-reference.md'
+- Command Reference: 'quantum-mechanic/command-reference.md'
 - Frequently Asked Questions: FAQ.md
 - Developer Docs: 'developer.md'
