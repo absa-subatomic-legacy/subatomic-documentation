@@ -36,17 +36,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
     
     
       
-        <title>Command Quick Reference - Subatomic User Docs</title>
+        <title>Command Reference - Subatomic User Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -69,8 +69,30 @@
     
     
       
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107338053-1"></script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-107338053-1")</script>
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-107338053-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
@@ -130,22 +152,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Subatomic User Docs
-              </span>
-              <span class="md-header-nav__topic">
-                Command Quick Reference
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Subatomic User Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Command Reference
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -168,7 +187,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -179,20 +197,18 @@
 
   
 
-
-  <a href="https://github.com/absa-subatomic/subatomic-documentation/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      absa-subatomic
+<a href="https://github.com/absa-subatomic/subatomic-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    absa-subatomic
+  </div>
+</a>
           </div>
         </div>
       
@@ -228,20 +244,18 @@
 
   
 
-
-  <a href="https://github.com/absa-subatomic/subatomic-documentation/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      absa-subatomic
+<a href="https://github.com/absa-subatomic/subatomic-documentation/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    absa-subatomic
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -357,11 +371,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Command Quick Reference
+        Command Reference
       </label>
     
-    <a href="./" title="Command Quick Reference" class="md-nav__link md-nav__link--active">
-      Command Quick Reference
+    <a href="./" title="Command Reference" class="md-nav__link md-nav__link--active">
+      Command Reference
     </a>
     
       
@@ -375,51 +389,322 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-reference" title="Quick Reference" class="md-nav__link">
+    Quick Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#bitbucket-commands" title="Bitbucket Commands" class="md-nav__link">
     Bitbucket Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jenkins-commands" title="Jenkins Commands" class="md-nav__link">
     Jenkins Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#member-commands" title="Member Commands" class="md-nav__link">
     Member Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#package-commands" title="Package Commands" class="md-nav__link">
     Package Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#project-commands" title="Project Commands" class="md-nav__link">
     Project Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#team-commands" title="Team Commands" class="md-nav__link">
     Team Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#other-commands" title="Other Commands" class="md-nav__link">
     Other Commands
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-reference" title="Detailed Reference" class="md-nav__link">
+    Detailed Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-config-server" title="sub add config server" class="md-nav__link">
+    sub add config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-team-owner" title="sub add team owner" class="md-nav__link">
+    sub add team owner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-team-member" title="sub add team member" class="md-nav__link">
+    sub add team member
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-apply-bitbucket-practices" title="sub apply bitbucket practices" class="md-nav__link">
+    sub apply bitbucket practices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-apply-to-team" title="sub apply to team" class="md-nav__link">
+    sub apply to team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-associate-team" title="sub associate team" class="md-nav__link">
+    sub associate team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-application-jenkins-prod" title="sub configure application jenkins prod" class="md-nav__link">
+    sub configure application jenkins prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-custom-package" title="sub configure custom package" class="md-nav__link">
+    sub configure custom package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-package" title="sub configure package" class="md-nav__link">
+    sub configure package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-project-bitbucket-access" title="sub configure project bitbucket access" class="md-nav__link">
+    sub configure project bitbucket access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-jenkins-bitbucket-credentials" title="sub create jenkins bitbucket credentials" class="md-nav__link">
+    sub create jenkins bitbucket credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-openshift-pvc" title="sub create openshift pvc" class="md-nav__link">
+    sub create openshift pvc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-project" title="sub create project" class="md-nav__link">
+    sub create project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-team" title="sub create team" class="md-nav__link">
+    sub create team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-team-channel" title="sub create team channel" class="md-nav__link">
+    sub create team channel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-help" title="sub help" class="md-nav__link">
+    sub help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-jenkins-build" title="sub jenkins build" class="md-nav__link">
+    sub jenkins build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-application" title="sub link application" class="md-nav__link">
+    sub link application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-bitbucket-project" title="sub link bitbucket project" class="md-nav__link">
+    sub link bitbucket project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-library" title="sub link library" class="md-nav__link">
+    sub link library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-team-channel" title="sub link team channel" class="md-nav__link">
+    sub link team channel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-list-projects" title="sub list projects" class="md-nav__link">
+    sub list projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-list-team-members" title="sub list team members" class="md-nav__link">
+    sub list team members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-onboard-me" title="sub onboard me" class="md-nav__link">
+    sub onboard me
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-patch-s2i-image" title="sub patch s2i image" class="md-nav__link">
+    sub patch s2i image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-project-request-jenkins-job" title="sub project request jenkins job" class="md-nav__link">
+    sub project request jenkins job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-remove-team-member" title="sub remove team member" class="md-nav__link">
+    sub remove team member
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-application-prod" title="sub request application prod" class="md-nav__link">
+    sub request application prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-devops-environment" title="sub request devops environment" class="md-nav__link">
+    sub request devops environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-generic-prod" title="sub request generic prod" class="md-nav__link">
+    sub request generic prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-project-environments" title="sub request project environments" class="md-nav__link">
+    sub request project environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-project-prod" title="sub request project prod" class="md-nav__link">
+    sub request project prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-tag-all-images" title="sub tag all images" class="md-nav__link">
+    sub tag all images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-tag-image" title="sub tag image" class="md-nav__link">
+    sub tag image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-team-migrate-cloud" title="sub team migrate cloud" class="md-nav__link">
+    sub team migrate cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -479,51 +764,322 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-reference" title="Quick Reference" class="md-nav__link">
+    Quick Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#bitbucket-commands" title="Bitbucket Commands" class="md-nav__link">
     Bitbucket Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jenkins-commands" title="Jenkins Commands" class="md-nav__link">
     Jenkins Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#member-commands" title="Member Commands" class="md-nav__link">
     Member Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#package-commands" title="Package Commands" class="md-nav__link">
     Package Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#project-commands" title="Project Commands" class="md-nav__link">
     Project Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#team-commands" title="Team Commands" class="md-nav__link">
     Team Commands
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#other-commands" title="Other Commands" class="md-nav__link">
     Other Commands
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-reference" title="Detailed Reference" class="md-nav__link">
+    Detailed Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-config-server" title="sub add config server" class="md-nav__link">
+    sub add config server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-team-owner" title="sub add team owner" class="md-nav__link">
+    sub add team owner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-add-team-member" title="sub add team member" class="md-nav__link">
+    sub add team member
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-apply-bitbucket-practices" title="sub apply bitbucket practices" class="md-nav__link">
+    sub apply bitbucket practices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-apply-to-team" title="sub apply to team" class="md-nav__link">
+    sub apply to team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-associate-team" title="sub associate team" class="md-nav__link">
+    sub associate team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-application-jenkins-prod" title="sub configure application jenkins prod" class="md-nav__link">
+    sub configure application jenkins prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-custom-package" title="sub configure custom package" class="md-nav__link">
+    sub configure custom package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-package" title="sub configure package" class="md-nav__link">
+    sub configure package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-configure-project-bitbucket-access" title="sub configure project bitbucket access" class="md-nav__link">
+    sub configure project bitbucket access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-jenkins-bitbucket-credentials" title="sub create jenkins bitbucket credentials" class="md-nav__link">
+    sub create jenkins bitbucket credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-openshift-pvc" title="sub create openshift pvc" class="md-nav__link">
+    sub create openshift pvc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-project" title="sub create project" class="md-nav__link">
+    sub create project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-team" title="sub create team" class="md-nav__link">
+    sub create team
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-create-team-channel" title="sub create team channel" class="md-nav__link">
+    sub create team channel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-help" title="sub help" class="md-nav__link">
+    sub help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-jenkins-build" title="sub jenkins build" class="md-nav__link">
+    sub jenkins build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-application" title="sub link application" class="md-nav__link">
+    sub link application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-bitbucket-project" title="sub link bitbucket project" class="md-nav__link">
+    sub link bitbucket project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-library" title="sub link library" class="md-nav__link">
+    sub link library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-link-team-channel" title="sub link team channel" class="md-nav__link">
+    sub link team channel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-list-projects" title="sub list projects" class="md-nav__link">
+    sub list projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-list-team-members" title="sub list team members" class="md-nav__link">
+    sub list team members
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-onboard-me" title="sub onboard me" class="md-nav__link">
+    sub onboard me
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-patch-s2i-image" title="sub patch s2i image" class="md-nav__link">
+    sub patch s2i image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-project-request-jenkins-job" title="sub project request jenkins job" class="md-nav__link">
+    sub project request jenkins job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-remove-team-member" title="sub remove team member" class="md-nav__link">
+    sub remove team member
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-application-prod" title="sub request application prod" class="md-nav__link">
+    sub request application prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-devops-environment" title="sub request devops environment" class="md-nav__link">
+    sub request devops environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-generic-prod" title="sub request generic prod" class="md-nav__link">
+    sub request generic prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-project-environments" title="sub request project environments" class="md-nav__link">
+    sub request project environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-request-project-prod" title="sub request project prod" class="md-nav__link">
+    sub request project prod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-tag-all-images" title="sub tag all images" class="md-nav__link">
+    sub tag all images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-tag-image" title="sub tag image" class="md-nav__link">
+    sub tag image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-team-migrate-cloud" title="sub team migrate cloud" class="md-nav__link">
+    sub team migrate cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -547,79 +1103,342 @@
                 
                 
                 <h1 id="quantum-mechanic"><strong>Quantum Mechanic</strong></h1>
-<p>Below are the commands and their explanations that you'll encounter while using Subatomic:</p>
+<p>Quantum Mechanic is the interactive Slack interface of Subatomic. Below are the commands and their explanations that you'll encounter while interacting with this interface.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>The below sections have the commands grouped by functionality and with very brief explanations to help you browse them. You can use the links for the commands to navigate to the full description of what each command does.</p>
 <h3 id="bitbucket-commands"><strong>Bitbucket Commands</strong></h3>
 <p>Bitbucket commands that control Bitbucket project configuration and access controls</p>
 <ol>
-<li><code>sub apply bitbucket practices</code> - Apply recommended practices to Bitbucket project</li>
+<li><a href="#sub-apply-bitbucket-practices"><code>sub apply bitbucket practices</code></a> - Apply recommended practices to Bitbucket project</li>
 </ol>
 <h3 id="jenkins-commands"><strong>Jenkins Commands</strong></h3>
-<p>Jenkins commands that allow the user to control builds and jenkins configuration</p>
+<p>Jenkins commands that allow the user to control builds and Jenkins configuration</p>
 <ol>
-<li><code>sub configure application jenkins prod</code> - Add a prod deployment job to jenkins for an application</li>
-<li><code>sub create jenkins bitbucket credentials</code> - Recreate the Jenkins Bitbucket Credentials</li>
-<li><code>sub jenkins build</code> - Kick off a Jenkins build</li>
-<li><code>sub project request jenkins job</code> - Creates a jenkins build folder for a given project</li>
+<li><a href="#sub-configure-application-jenkins-prod"><code>sub configure application jenkins prod</code></a> - Add a prod deployment job to Jenkins for an application</li>
+<li><a href="#sub-create-jenkins-bitbucket-credentials"><code>sub create jenkins bitbucket credentials</code></a> - Recreate the Jenkins Bitbucket Credentials</li>
+<li><a href="#sub-jenkins-build"><code>sub jenkins build</code></a> - Kick off a Jenkins build</li>
+<li><a href="#sub-project-request-jenkins-job"><code>sub project request jenkins job</code></a> - Creates a Jenkins build folder for a given project</li>
 </ol>
 <h3 id="member-commands"><strong>Member Commands</strong></h3>
 <p>Member commands allow you to manage Subatomic members. These include editing Slack details, on-boarding, editing user roles and adding members to teams.</p>
 <ol>
-<li><code>sub add team member</code> - Add a member to a team</li>
-<li><code>sub add team owner</code> - Add a member as an owner to a team</li>
-<li><code>sub add slack</code> - Add Slack details to an existing team member</li>
-<li><code>sub onboard me</code> - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your <code>first name</code>, <code>last name</code>, <code>email address</code> and <code>domain username</code>. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click <a href="../../user-guide/onboarding/">here</a></li>
+<li><a href="#sub-add-team-member"><code>sub add team member</code></a> - Add a member to a team</li>
+<li><a href="#sub-add-team-owner"><code>sub add team owner</code></a> - Add a member as an owner to a team</li>
+<li><a href="#sub-onboard-me"><code>sub onboard me</code></a> - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your <code>first name</code>, <code>last name</code>, <code>email address</code> and <code>domain username</code>. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click <a href="../../user-guide/onboarding/">here</a>.</li>
 </ol>
 <h3 id="package-commands"><strong>Package Commands</strong></h3>
 <p>Package commands are related to managing applications and libraries. These include deployment, build, prod promotion and image management.</p>
 <ol>
-<li><code>sub configure application jenkins prod</code> - Add a prod deployment job to jenkins for an application</li>
-<li><code>sub configure package</code> - Configure an existing application/library using a predefined template</li>
-<li><code>sub configure custom package</code> - Configure an existing application/library</li>
-<li><code>sub request application prod</code> - Create application in prod</li>
-<li><code>sub link application</code> - Link an existing application</li>
-<li><code>sub patch package s2i image</code> - Patch the s2i image used to build a package</li>
+<li><a href="#sub-configure-application-jenkins-prod"><code>sub configure application jenkins prod</code></a> - Add a prod deployment job to Jenkins for an application</li>
+<li><a href="#sub-configure-package"><code>sub configure package</code></a> - Configure an existing application/library using a predefined template</li>
+<li><a href="#sub-configure-custom-package"><code>sub configure custom package</code></a> - Configure an existing application/library manually specifying all build/deployment details.</li>
+<li><a href="#sub-request-application-prod"><code>sub request application prod</code></a> - Create application in prod</li>
+<li><a href="#sub-link-application"><code>sub link application</code></a> - Link an existing application</li>
+<li><a href="#sub-link-library"><code>sub link library</code></a> - Link an existing library</li>
+<li><a href="#sub-patch-package-s2i-image"><code>sub patch package s2i image</code></a> - Patch the s2i image used to build a package</li>
 </ol>
 <h3 id="project-commands"><strong>Project Commands</strong></h3>
-<p>Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, jenkins and Bitbucket configuration.</p>
+<p>Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, Jenkins and Bitbucket configuration.</p>
 <ol>
-<li><code>sub associate team</code> - Add additional team/s to a project</li>
-<li><code>sub configure project bitbucket access</code> - Reconfigure user and system access to Bitbucket for an existing project</li>
-<li><code>sub apply bitbucket practices</code> - Apply recommended practices to Bitbucket project</li>
-<li><code>sub request generic prod</code> - Move OpenShift resources to prod *</li>
-<li><code>sub create OpenShift pvc</code> - Create a new OpenShift Persistent Volume Claim</li>
-<li><code>sub create project</code> - Create a new project. You will need to input two values <code>project name</code> and <code>project description</code>.</li>
-<li><code>sub request project prod</code> - Create the OpenShift production environments for a project</li>
-<li><code>sub link application</code> - Link an existing application</li>
-<li><code>sub link library</code> - Link an existing library</li>
-<li><code>sub link bitbucket project</code> - You will need to input your <code>bitbucket project key</code> and Subatomic will find the existing project within Bitbucket.</li>
-<li><code>sub list projects</code> - List projects belonging to a team</li>
-<li><code>sub request project environments</code> - Create new OpenShift environments for a project</li>
-<li><code>sub project request jenkins job</code> - Creates a jenkins build folder for a given project</li>
+<li><a href="#sub-associate-team"><code>sub associate team</code></a> - Add additional team/s to a project</li>
+<li><a href="#sub-configure–project-bitbucket–access"><code>sub configure project bitbucket access</code></a> - Reconfigure user and system access to Bitbucket for an existing project</li>
+<li><a href="#sub-apply-bitbucket-practices"><code>sub apply bitbucket practices</code></a> - Apply recommended practices to Bitbucket project</li>
+<li><a href="#sub-request-generic-prod"><code>sub request generic prod</code></a> - Move OpenShift resources to prod</li>
+<li><a href="#sub-create-openshift-pvc"><code>sub create openshift pvc</code></a> - Create a new OpenShift Persistent Volume Claim</li>
+<li><a href="#sub-create-project"><code>sub create project</code></a> - Create a new project. You will need to input two values <code>project name</code> and <code>project description</code>.</li>
+<li><a href="#sub-request-project-prod"><code>sub request project prod</code></a> - Create the OpenShift production environments for a project and a particular pipeline.</li>
+<li><a href="#sub-link-application"><code>sub link application</code></a> - Link an existing application</li>
+<li><a href="#sub-link-library"><code>sub link library</code></a> - Link an existing library</li>
+<li><a href="#sub-link-bitbucket-project"><code>sub link bitbucket project</code></a> - You will need to input your <code>bitbucket project key</code> and Subatomic will find the existing project within Bitbucket.</li>
+<li><a href="#sub-list-projects"><code>sub list projects</code></a> - List projects belonging to a team</li>
+<li><a href="#sub-request-project-environments"><code>sub request project environments</code></a> - Create new OpenShift environments for a project</li>
+<li><a href="#sub-project-request-jenkins-job"><code>sub project request jenkins job</code></a> - Creates a Jenkins build folder for a given project</li>
 </ol>
 <h3 id="team-commands"><strong>Team Commands</strong></h3>
 <p>Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.</p>
 <ol>
-<li><code>sub add config server</code> - Add a new Subatomic Config Server</li>
-<li><code>sub add team member</code> - Add a member to a team</li>
-<li><code>sub add team owner</code> - Add a member as an owner to a team</li>
-<li><code>sub associate team</code> - Add additional team/s to a project</li>
-<li><code>sub create team</code> - You will need to input two values <code>team name</code> and <code>team description</code>. This will create a team with the respective values in Subatomic.</li>
-<li><code>sub apply to team</code> - Apply to join an existing team</li>
-<li><code>sub link team channel</code> - If you already have an existing slack channel use this command. Subatomic will add the atomist bot to this channel, however if the channel is private you will need to manually invite the bot.</li>
-<li><code>sub list team members</code> - Displays members and owners of the team.</li>
-<li><code>sub team migrate cloud</code> - Move all Openshift resources belonging to a team to a different cloud</li>
-<li><code>sub request devops environment</code> - Check whether to create a new OpenShift DevOps environment or use an existing one</li>
-<li><code>sub create team channel</code> - This will create a public slack channel, if you want a private channel you will need to create it manually then run  <code>sub link team channel</code> command above (7).</li>
-<li><code>sub remove team member</code> - Removes a member (not owner) from a team.</li>
-<li><code>sub tag all images</code> - Tag all latest subatomic images to a devops environment</li>
-<li><code>sub tag image</code> - Tag an individual subatomic image to a devops environment</li>
+<li><a href="#sub-add-config-server"><code>sub add config server</code></a> - Add a new Subatomic Spring Cloud Config Server</li>
+<li><a href="#sub-add-team-member"><code>sub add team member</code></a> - Add a member to a team</li>
+<li><a href="#sub-add-team-owner"><code>sub add team owner</code></a> - Add a member as an owner to a team</li>
+<li><a href="#sub-associate-team"><code>sub associate team</code></a> - Add additional team/s to a project</li>
+<li><a href="#sub-create-team"><code>sub create team</code></a> - You will need to input two values <code>team name</code> and <code>team description</code>. This will create a team with the respective values in Subatomic.</li>
+<li><a href="#sub-apply-to-team"><code>sub apply to team</code></a> - Apply to join an existing team</li>
+<li><a href="#sub-link-team-channel"><code>sub link team channel</code></a> - If you already have an existing slack channel use this command. Subatomic will add the atomist bot to this channel, however if the channel is private you will need to manually invite the bot.</li>
+<li><a href="#sub-list-team-members"><code>sub list team members</code></a> - Displays members and owners of the team.</li>
+<li><a href="#sub-team-migrate-cloud"><code>sub team migrate cloud</code></a> - Move all OpenShift resources belonging to a team to a different cloud</li>
+<li><a href="#sub-request-devops-environment"><code>sub request devops environment</code></a> - Create a DevOps environment for a selected Team.</li>
+<li><a href="#sub-create-team-channel"><code>sub create team channel</code></a> - This will create a public slack channel, if you want a private channel you will need to create it manually then run <a href="#sub-link-team-channel"><code>sub link team channel</code></a> command.</li>
+<li><a href="#sub-remove-team-member"><code>sub remove team member</code></a> - Removes a member from a team.</li>
+<li><a href="#sub-tag-all-images"><code>sub tag all images</code></a> - Tag all latest subatomic images to a DevOps environment</li>
+<li><a href="#sub-tag-image"><code>sub tag image</code></a> - Tag an individual subatomic image to a DevOps environment</li>
 </ol>
 <h3 id="other-commands"><strong>Other Commands</strong></h3>
 <p>All other general/miscellaneous commands</p>
 <ol>
-<li><code>sub create openshift pvc</code> - Create a new OpenShift Persistent Volume Claim</li>
-<li><code>sub team migrate cloud</code> - Move all Openshift resources belonging to a team to a different cloud</li>
-<li><code>sub help</code> - Displays an interactive help menu</li>
+<li><a href="#sub-create-openshift-pvc"><code>sub create openshift pvc</code></a> - Create a new OpenShift Persistent Volume Claim</li>
+<li><a href="#sub-team-migrate-cloud"><code>sub team migrate cloud</code></a> - Move all OpenShift resources belonging to a team to a different cloud</li>
+<li><a href="#sub-help"><code>sub help</code></a> - Displays a help menu as a Slack browsable form of the Quick Reference section of this page.</li>
+</ol>
+<h2 id="detailed-reference">Detailed Reference</h2>
+<p>This section is dedicated to explaining in detail what each command does. The subatomic environment is designed to speed up developer workflow, but it should never prevent users from using the underlying stack directly if needed or desired.
+The information here is put in place to help users understand exactly what is going on under the hood so that clarity is provided and manual execution of each command could be performed if desired.</p>
+<hr />
+<h4 id="sub-add-config-server"><code>sub add config server</code></h4>
+<p>This command is used to create a <a href="https://spring.io/projects/spring-cloud-config">Spring Cloud Config</a> server for a team. The config server is configured to point to a single repository where application configuration is pulled from. The command itself performs the following steps:</p>
+<ol>
+<li>The Secret <code>subatomic-config-server</code> is created in the teams DevOps environment. This Secret contains the ssh key configuration required by the config server to access your Bitbucket config repository.</li>
+<li>The ConfigMap <code>subatomic-config-server</code> is created in the teams DevOps environment. This contains the default <code>application.yml</code> configuration used by the config server.</li>
+<li>The <code>subatomic-config-server</code> ImageStream is tagged into the teams DevOps environment.</li>
+<li>The <code>default</code> service account is granted view rights since this is required to run the config server.</li>
+<li>The <code>subatomic-config-server-template</code> Template is then processed to created the necessary DeploymentConfig and Service in OpenShift.</li>
+</ol>
+<hr />
+<h4 id="sub-add-team-owner"><code>sub add team owner</code></h4>
+<p>This is used to directly add a user to a Team you are the owner of with owner permissions. The user will need to have been on-boarded before you can add them to the Team. Adding user as an owner performs the following operations:</p>
+<ol>
+<li>Associate the user to the Team in the Subatomic database as an owner.</li>
+<li>Add the user to all OpenShift namespaces associated to the Team and grant them Admin permissions.</li>
+<li>Add the user to the Bitbucket projects for each Subatomic Project associated to the team. They are granted Admin rights on the Bitbucket projects.</li>
+<li>Invite the new user to the Team's slack channel.</li>
+</ol>
+<hr />
+<h4 id="sub-add-team-member"><code>sub add team member</code></h4>
+<p>This is used to directly add a user to a Team you are the owner of with member permissions. The user will need to have been on-boarded before you can add them to the Team. Adding user as a member performs the following operations:</p>
+<ol>
+<li>Associate the user to the Team in the Subatomic database as a member.</li>
+<li>Add the user to all OpenShift namespaces associated to the Team and grant them Write permissions.</li>
+<li>Add the user to the Bitbucket projects for each Subatomic Project associated to the team.</li>
+<li>Invite the new user to the Team's slack channel.</li>
+</ol>
+<hr />
+<h4 id="sub-apply-bitbucket-practices"><code>sub apply bitbucket practices</code></h4>
+<p>This will apply an opinionated set of recommended configuration settings to a Project's associated Bitbucket Project. The following is a list of the configuration that will be applied:</p>
+<ol>
+<li>Restrict master branch merges to only allow <code>fast-forward</code> merges.</li>
+<li>Restrict master branch to only allow changes through pull requests.</li>
+<li>Mark master branch as not deletable.</li>
+<li>Enables the Verify Committer hook.</li>
+<li>Enables the Required Build before merging hook.</li>
+<li>Enables the No Incomplete Tasks before merging hook.</li>
+<li>Add all owners and members of the team to the default reviewers list.</li>
+</ol>
+<hr />
+<h4 id="sub-apply-to-team"><code>sub apply to team</code></h4>
+<p>This command allows users to send a request to a Team asking to be added as a member of that team. When executing this command, a membership request is created to the Team and Slack notification with Approve and Reject options is sent to the Team. An owner of the team needs to approve or reject this request. If the membership request is approved, the following actions are performed:</p>
+<ol>
+<li>Associate the user to the Team in the Subatomic database as a member.</li>
+<li>Add the user to all OpenShift namespaces associated to the Team and grant them Write permissions.</li>
+<li>Add the user to the Bitbucket projects for each Subatomic Project associated to the team.</li>
+<li>Invite the new user to the Team's slack channel.</li>
+</ol>
+<hr />
+<h4 id="sub-associate-team"><code>sub associate team</code></h4>
+<p>This allows users to associate additional Teams to a Subatomic Project. Users of these associated Teams are granted permissions to all the Project source code and deployment environments. Additionally any Project notifications will be shown in the newly associated Team's Slack channel.</p>
+<hr />
+<h4 id="sub-configure-application-jenkins-prod"><code>sub configure application jenkins prod</code></h4>
+<p>When running a Generic Prod request, all OpenShift resources in the highest non-prod environment are indiscriminately moved over to the production environments. This is just a straight copy of the resources, and <strong>does not</strong> configure any Jenkins jobs for Application production deployments.
+This command is used to create just the Jenkins jobs for deploying an application into production environments following such a resource copying operation. The following steps are performed in order to do this:</p>
+<ol>
+<li>Generate a Jenkinsfile that will be used to deploy the application into prod. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is <code>Jenkinsfile.[${pipelineTag}.]${environmentPostfix}</code> where <code>[${pipelineTag}.]</code> is not present if the deployment's owning pipeline has no tag.</li>
+<li>Create a Jenkins build job that uses the generated Jenkinsfile to deploy your Application. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related to the Application being deployed.</li>
+</ol>
+<hr />
+<h4 id="sub-configure-custom-package"><code>sub configure custom package</code></h4>
+<p>When a Package(either an Application or Library) is created in Subatomic, there are no details captured about how it should be built or deployed. It is just a piece of metadata describing the details of a Package's name, whether it is deployable, where it's source code lives etc. The user needs to then tell Subatomic how they wish to build/deploy this Package. Running this command will prompt the user to enter the minimal details required to build or deploy the Package. This includes the following:</p>
+<ul>
+<li>The S2I ImageStream to use to build an Application.</li>
+<li>The OpenShift template to process in order to create the Application's OpenShift resources in each deployment environment.</li>
+<li>The default Jenkinsfile to add to the Package repository (This is the only configuration entry used for a Library).</li>
+</ul>
+<p>Once all of these details are specified the following actions are performed:</p>
+<p><strong>For Applications:</strong></p>
+<ol>
+<li>Configure the OpenShift portions of the Application:<ol>
+<li>Create the OpenShift ImageStream in the owning Team's DevOps environment. This is where the OpenShift build pushes the built Application images to.</li>
+<li>Create the OpenShift BuildConfig in the owning Team's DevOps environment. This performs the S2I build for the Application.</li>
+<li>Process the supplied OpenShift Template to create the required deployment resources. This typically will always include an ImageStream and DeploymentConfig.</li>
+</ol>
+</li>
+<li>Configure the Jenkins build and default deployments for the Application:<ol>
+<li>Generate a Jenkinsfile that will build and deploy your application through your default pipeline. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is <code>Jenkinsfile</code>.</li>
+<li>Create a Jenkins build job that uses the generated Jenkinsfile to build your Application. The build job is also added to a Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.</li>
+</ol>
+</li>
+<li>For each environment in each release pipeline in your project, configure the Jenkins deployment process:<ol>
+<li>Generate a Jenkinsfile that will be used to deploy the application into the environment. The Jenkinsfile is then added to your Application repository if it does not exist. The name of the Jenkinsfile is <code>Jenkinsfile.[${pipelineTag}.]${environmentPostfix}</code> where <code>[${pipelineTag}.]</code> is not present if the environment's owning pipeline has no tag.</li>
+<li>Create a Jenkins build job that uses the generated Jenkinsfile to promote your Application from the previous environment. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related to the Application being deployed.</li>
+</ol>
+</li>
+</ol>
+<p><strong>For Libraries:</strong></p>
+<ol>
+<li>Generate a Jenkinsfile that will build your Library. This Jenkinsfile should be modified by the user to push your artifacts somewhere they can be reused from. The Jenkinsfile is then added to your Library repository if it does not exist. The name of the Jenkinsfile is <code>Jenkinsfile</code>.</li>
+<li>Create a Jenkins build job that uses the generated Jenkinsfile to build your Library.</li>
+</ol>
+<hr />
+<h4 id="sub-configure-package"><code>sub configure package</code></h4>
+<p>When a Package(either an Application or Library) is created in Subatomic, there are no details captured about how it should be built or deployed. It is just a piece of metadata describing the details of a Package's name, whether it is deployable, where it's source code lives etc. The user needs to then tell Subatomic how they wish to build/deploy this Package. Running this command presents the user with a prompt to decide what Package Definition to apply to the Package. A Package Definition is a preset configuration file which describes the following:</p>
+<ul>
+<li>The S2I ImageStream to use to build an Application.</li>
+<li>The environment variables to set during the S2I build.</li>
+<li>The OpenShift template to process in order to create the Application's OpenShift resources in each deployment environment.</li>
+<li>The environment variables to set in the Deployment Configs created in each OpenShift environment.</li>
+<li>The default Jenkinsfile to add to the Package repository (This is the only configuration entry used for a Library).</li>
+</ul>
+<p>The system administrators should create custom Package Definitions for the most common types of Packages used in your orginisation and these should appear in the dropdown for selection. After selecting a Package Definition to use all the information is passed through to the <code>sub configure custom package</code> command. To find out more about this command click <a href="#sub-configure-custom-package">here</a>.</p>
+<hr />
+<h4 id="sub-configure-project-bitbucket-access"><code>sub configure project bitbucket access</code></h4>
+<p>This command is used to assign the necessary permissions to a Project's associated Bitbucket Project. This is useful if either the Subatomic service account has lost permissions, users permissions were changed, or your repositories have been migrated to a new Bitbucket instance. In particular the following permissions are set up:</p>
+<ol>
+<li>Give the Subatomic service account admin permissions.</li>
+<li>Give Team owners admin permissions.</li>
+<li>Give Team members write permissions.</li>
+</ol>
+<hr />
+<h4 id="sub-create-jenkins-bitbucket-credentials"><code>sub create jenkins bitbucket credentials</code></h4>
+<p>This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket and clone sources used in builds. This should only need to be run if the Service Account credentials have changed.</p>
+<hr />
+<h4 id="sub-create-openshift-pvc"><code>sub create openshift pvc</code></h4>
+<p>This command can be used to either add a PersistentVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.</p>
+<hr />
+<h4 id="sub-create-project"><code>sub create project</code></h4>
+<p>This command can be used to create a new Subatomic Project associated to a particular Team. This just creates the metadata representation of the project within the Subatomic database. After creating a Project, you will need to associate it to a Bitbucket Project which you should be prompted for. More information about associating a Subatomic Project to a Bitbucket project can be found <a href="#sub-link-bitbucket-project">here</a>. Once the Project has been fully defined, this captured metadata can then be used as the input into 'templates' that create things such as <a href="#sub-request-project-environments">new OpenShift environments</a>, or <a href="#sub-project-request-jenkins-job">Jenkins build jobs</a>.</p>
+<hr />
+<h4 id="sub-create-team"><code>sub create team</code></h4>
+<p>This command can be used to create a new Subatomic Team. This only creates the metadata model of the Team in the Subatomic database. This can then be used as the base to create a DevOps environment and create new Project's under. <strong>Note:</strong> When creating a new team, the user that executes the command will be made the owner of this Team.</p>
+<hr />
+<h4 id="sub-create-team-channel"><code>sub create team channel</code></h4>
+<p>This command will create a Slack channel with the supplied name and assign it as the Team's associated Subatomic Slack channel. The following actions are performed when running this command:</p>
+<ol>
+<li>Create a Slack channel with the chosen name.</li>
+<li>Assign the Slack channel to the Team's associated Subatomic slack channel in the Subatomic database.</li>
+<li>Invite the Atomist bot to the newly created Slack channel.</li>
+<li>Invite all Team owners and members to the newly created Slack channel.</li>
+</ol>
+<p><strong>Note:</strong> When following the message prompts after creating a Team, the Slack channel will automatically be created using the Team's name in kebab case format.</p>
+<hr />
+<h4 id="sub-help"><code>sub help</code></h4>
+<p>Displays a help menu as a Slack browsable form of the Quick Reference section of this page.</p>
+<hr />
+<h4 id="sub-jenkins-build"><code>sub jenkins build</code></h4>
+<p>This will kick off a Jenkins dev pipeline build for a selected application. That is it will run the build associated to the standard Jenkinsfile for an Application, and not the additional deployment jobs associated to the Application.</p>
+<hr />
+<h4 id="sub-link-application"><code>sub link application</code></h4>
+<p>This will prompt a user for details about an Application they wish to allow Subatomic to manage. This will require an existing initialised repository in the Bitbucket project associated to the Application's intended owning Subatomic Project. This creates the metadata representation of the Application within the Subatomic database. Once the Application has been created the user needs to decide how Subatomic should treat the Application. See <a href="#sub-configure-package">sub configure package</a> for more details.</p>
+<hr />
+<h4 id="sub-link-bitbucket-project"><code>sub link bitbucket project</code></h4>
+<p>When creating a Project in Subatomic, the Subatomic Project needs to be associated to a Bitbucket project. This command is used to do this linking. In order to link the Bitbucket project to the Subatomic Project the user needs to provide the Bitbucket project key. Instructions on finding this Bitbucket project key can be found in the <a href="../../FAQ/#sub-link-bitbucket-project">FAQ</a>.</p>
+<hr />
+<h4 id="sub-link-library"><code>sub link library</code></h4>
+<p>This will prompt a user for details about a Library they wish to allow Subatomic to manage. This will require an existing initialised repository in the Bitbucket project associated to the Application's intended owning Subatomic Project. This creates the metadata representation of the Library within the Subatomic database. Once the Library has been created the user needs to decide how Subatomic should treat the Library. See <a href="#sub-configure-package">sub configure package</a> for more details.</p>
+<hr />
+<h4 id="sub-link-team-channel"><code>sub link team channel</code></h4>
+<p>This command allows a user to link their Team to a new Slack channel for notification purposes. The Slack channel needs to exist for this command to work correctly. This is particularly useful if the currently associated Team channel was renamed, if you want to use a private slack channel(*) for the team notifications, or if you have an existing channel you wish to use for the notifications and Subatomic control flow interaction. When linking a Team to a new Slack channel the following actions are performed:
+1. Invite the Members of the Team to the Slack channel.
+2. Invite the Atomist Bot to the Team Channel.</p>
+<p>The Atomist Bot should present a generic message about creating a DevOps environment whenever it joins a new channel that is associated to a Team.</p>
+<p><strong>*Note:</strong> If you want to use a private Slack channel, the Atomist bot cannot be invited automatically. You will need to manually invite the bot the to channel using <code>\invite @Atomist</code> once you have linked the Team to the Slack channel.</p>
+<hr />
+<h4 id="sub-list-projects"><code>sub list projects</code></h4>
+<p>This command is used to provide users a way to view the details around what Projects are linked to a particular team. These details include the Project names and associated Bitbucket projects, along with options to drill down into each Project's associated Package details.</p>
+<hr />
+<h4 id="sub-list-team-members"><code>sub list team members</code></h4>
+<p>This will present a list of the Team owners and users. This is useful to know who can perform actions that require ownership permission.</p>
+<hr />
+<h4 id="sub-onboard-me"><code>sub onboard me</code></h4>
+<p>This is the first command any user should run. Without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your <code>first name</code>, <code>last name</code>, <code>email address</code> and <code>domain username</code>. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click <a href="../../user-guide/onboarding/">here</a>.</p>
+<hr />
+<h4 id="sub-patch-s2i-image"><code>sub patch s2i image</code></h4>
+<p>This looks up the latest versions of s2i ImageStream's available, tags a selected one to your Team DevOps environment, and changes a selected Application's BuildConfig to use updated ImageStream.</p>
+<hr />
+<h4 id="sub-project-request-jenkins-job"><code>sub project request jenkins job</code></h4>
+<p>This requests a build folder for a specific project be created. This can either be useful if the build folder is deleted, or a user wants to create builds for a project without creating the OpenShift environments. The use case for the latter being when a Project only contains libraries and no deployable applications. This performs the following operations:</p>
+<ol>
+<li>Create the build folder for the Project. The build folder uses the Project's name to name the build folder.</li>
+<li>Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev OpenShift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.</li>
+<li>Create the Bitbucket authorization credential. This is used by Jenkins to clone sources from the configured Bitbucket instance.</li>
+</ol>
+<hr />
+<h4 id="sub-remove-team-member"><code>sub remove team member</code></h4>
+<p>This command is used to remove a member from a Team. This action can only be performed by a Team owner. When removing a member from a team, the following actions are performed:</p>
+<ol>
+<li>Remove the Subatomic association between the user and the Team.</li>
+<li>Remove the user's permissions from all OpenShift namespaces associated to the Team.</li>
+<li>Remove the user's permissions from the Bitbucket project's associated to the Team.</li>
+<li>Kick the user from the Team's Slack channel.</li>
+</ol>
+<p><strong>Note:</strong> Team owners can also be removed (including self removal), provided that there is currently more than 1 Team owner.</p>
+<hr />
+<h4 id="sub-request-application-prod"><code>sub request application prod</code></h4>
+<p>This command can be used to request moving an Application into production. The command when run initially scans the highest non prod environment if the selected pipeline for a DeploymentConfig used by this Application. By traversing the DeploymentConfig a tree of related OpenShift resources related to this Application can be found. The types of resources included in the search are DeploymentConfigs, Services, Routes, PersistentVolumeClaims, and ImageStreams. The user is presented with the list of identified resources, and confirms they are happy to move these into the production in environments. Upon confirmation the following actions are performed:</p>
+<ol>
+<li>Move across all identified resources into each production environment.</li>
+<li>Generate a Jenkinsfile that will be used to deploy the application into prod. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is <code>Jenkinsfile.[${pipelineTag}.]${environmentPostfix}</code> where <code>[${pipelineTag}.]</code> is not present if the deployment's owning pipeline has no tag.</li>
+<li>Create a Jenkins build job that uses the generated Jenkinsfile to deploy your Application. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.</li>
+</ol>
+<hr />
+<h4 id="sub-request-devops-environment"><code>sub request devops environment</code></h4>
+<p>A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: </p>
+<ol>
+<li>Create the OpenShift namespace for the Team. This will be named <code>${teamName}-${devops}</code> using kebab casing.</li>
+<li>Apply the system admin set default OpenShift Limits and Quota's to the new namespace.</li>
+<li>Give all Team members write permissions to the DevOps namespace.</li>
+<li>Give all Team owners admin permissions to the DevOps namespace.</li>
+<li>Copy all Subatomic application templates to the DevOps namespace from the Subatomic namespace.</li>
+<li>Tag all Subatomic S2I, Jenkins, and config server ImageStreams to the DevOps namespace from the Subatomic namespace.</li>
+<li>Create a secret <code>bitbucket-ssh</code> which contains the credentials required by the shared DevOps applications to access Bitbucket.</li>
+</ol>
+<hr />
+<h4 id="sub-request-generic-prod"><code>sub request generic prod</code></h4>
+<p>This command can be used to request moving all OpenShift resources in a non prod environment to the production environments. This is useful for if you have created resources that are not directly associated to a Subatomic Application (like a custom deployment or build) and you are taking the Project to production for the first time. This command when run initially scans the highest non prod environment looking for all DeploymentConfigs, Services, Routes, PersistentVolumeClaims, and ImageStreams. The user is presented with the list of identified resources, and confirms they are happy to move these into the production in environments. Upon confirmation all identified resources are copied in each production environment. <strong>Note:</strong> If your project is purely Subatomic created, then the recommended process is to just use the <a href="#sub-request-application-prod"><code>sub request application prod</code></a> command to move each application to production individually.</p>
+<hr />
+<h4 id="sub-request-project-environments"><code>sub request project environments</code></h4>
+<p>After creating a Subatomic Project, a user can request that the Project have OpenShift environments provisioned for its use. When requesting these environments, if the Project has not had its build/dev and release pipelines defined, the Project will be assigned a default pipeline structure. The following actions are then performed:</p>
+<ol>
+<li>Configure the Project OpenShift resources:<ol>
+<li>Create an OpenShift namespace created for each environment of each deployment and release pipeline associated to a Project.</li>
+<li>Assign default OpenShift Quota and Limits and apply a standard OpenShift Project namespace template to these namespaces. The default template, Quota's, and Limits, will be customised by your System Admin to meet the requirement of the organisation's space.</li>
+<li>Create a Pod Network between each OpenShift Project Namespace and the Team's DevOps namespace. This allows the Applications in the Project namespaces to access Application's in the DevOps space via service URI's (e.g. accessing the DevOps Config Server).</li>
+</ol>
+</li>
+<li>Configure the Project in Jenkins:<ol>
+<li>Create the build folder for the Project. The build folder uses the Project's name to name the build folder.</li>
+<li>Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev OpenShift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.</li>
+<li>Create the Bitbucket authorization credential. This is used by Jenkins to clone sources from the configured Bitbucket instance.</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h4 id="sub-request-project-prod"><code>sub request project prod</code></h4>
+<p>In order to promote Applications to production, you need to have production environments available to deploy the Application's into. This command will allow users to provision these production environments for a selected Project and deployment pipeline. The process follows the following approach:</p>
+<ol>
+<li>Request that the Team members put their names down in a sign off process to approve that the Project is ready for production:<ol>
+<li>If a user rejects the approval request, the entire Prod Request is cancelled.</li>
+<li>You need at least 3 approvals to have the Prod Request approved. If you have less that 3 team members, then instead all Team members need to approve this request.</li>
+</ol>
+</li>
+<li>Once the request is approved the following actions are then performed<ol>
+<li>A Team DevOps OpenShift namespace is created on each production cluster if it does not exists already.</li>
+<li>A Project Pipeline OpenShift namespace is created on each production cluster.</li>
+<li>A pod network is setup so that the Applications in the production Project environments can communicate with the DevOps environment services.</li>
+</ol>
+</li>
+</ol>
+<p>Once a Project pipeline has been moved to production then the Applications within the Project can be setup to move into production. For more information on this look at <a href="#sub-request-generic-prod"><code>sub request generic prod</code></a> and <a href="#sub-request-application-prod"><code>sub request application prod</code></a>.</p>
+<hr />
+<h4 id="sub-tag-all-images"><code>sub tag all images</code></h4>
+<p>This command tags all the latest version of the S2I, Jenkins, and Config Server ImageStreams to a Team's DevOps environment from the Subatomic namespace.</p>
+<hr />
+<h4 id="sub-tag-image"><code>sub tag image</code></h4>
+<p>This command tags latest version of a particular ImageStream to a Team's DevOps environment from the Subatomic namespace.</p>
+<hr />
+<h4 id="sub-team-migrate-cloud"><code>sub team migrate cloud</code></h4>
+<p>When a Team in Subatomic is created, it is associated to a particular "cloud". A cloud represents a group of OpenShift clusters that are grouped into a non prod cluster, and multiple production clusters. Provided that the Subatomic deployment has been configured to use multiple "clouds", this command can be used to migrate a Team and all associated Projects from one cloud to another cloud. The steps in this operation are as follows:</p>
+<ol>
+<li>Create a new DevOps environment on the new cloud's non prod cluster.</li>
+<li>Recreate all OpenShift namespaces from all Projects associated to the Team being migrated.</li>
+<li>Copy all OpenShift resources from the original environments to the newly created OpenShift environments. This includes DeploymentConfig, Service, Route, PersistentVolumeClaim, and ImageStream resources.</li>
+<li>Recreate the Jenkins build jobs for each Application associated to the Project.</li>
 </ol>
                 
                   
@@ -688,7 +1507,6 @@
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
@@ -696,14 +1514,13 @@
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.a353778b.js"></script>
+      <script src="../../assets/javascripts/application.b806dc00.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
