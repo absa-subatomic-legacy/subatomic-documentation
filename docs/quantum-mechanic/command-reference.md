@@ -1,5 +1,5 @@
 # **Quantum Mechanic**
-Quantum Mechanic is the interactive Slack interface of Subatomic. Below are the commands and their explanations that you'll encounter while interacting this interface.
+Quantum Mechanic is the interactive Slack interface of Subatomic. Below are the commands and their explanations that you'll encounter while interacting with this interface.
 
 ## Quick Reference
 The below sections have the commands grouped by functionality and with very brief explanations to help you browse them. You can use the links for the commands to navigate to the full description of what each command does.
@@ -84,13 +84,13 @@ The information here is put in place to help users understand exactly what is go
 
 ---
 #### `sub add config server`
-This command is used to create a [Spring Cloud Config](https://spring.io/projects/spring-cloud-config) server for a team. The config server is configured to point to a single repository where application configuration is pulled from. The command itself performs the following steps
+This command is used to create a [Spring Cloud Config](https://spring.io/projects/spring-cloud-config) server for a team. The config server is configured to point to a single repository where application configuration is pulled from. The command itself performs the following steps:
 
 1. The Secret `subatomic-config-server` is created in the teams DevOps environment. This Secret contains the ssh key configuration required by the config server to access your Bitbucket config repository.
 2. The ConfigMap `subatomic-config-server` is created in the teams DevOps environment. This contains the default `application.yml` configuration used by the config server.
 3. The `subatomic-config-server` ImageStream is tagged into the teams DevOps environment.
 4. The `default` service account is granted view rights since this is required to run the config server.
-5. The `subatomic-config-server-template` Template is the then processed to created the necessary DeploymentConfig and Service in OpenShift.
+5. The `subatomic-config-server-template` Template is then processed to created the necessary DeploymentConfig and Service in OpenShift.
 
 ---
 #### `sub add team owner`
@@ -125,7 +125,7 @@ This will apply an opinionated set of recommended configuration settings to a Pr
 
 ---
 #### `sub apply to team`
-This command allows users to send a request to a Team asking to be added as a member of that team. When executing this command, a membership request is created to the Team and Slack notification with Approve and Reject options is sent to the Team. An owner of the team needs to approve or reject this request. If the membership request is approved, following actions are performed.
+This command allows users to send a request to a Team asking to be added as a member of that team. When executing this command, a membership request is created to the Team and Slack notification with Approve and Reject options is sent to the Team. An owner of the team needs to approve or reject this request. If the membership request is approved, the following actions are performed:
 
 1. Associate the user to the Team in the Subatomic database as a member.
 2. Add the user to all OpenShift namespaces associated to the Team and grant them Write permissions.
@@ -142,7 +142,7 @@ When running a Generic Prod request, all OpenShift resources in the highest non-
 This command is used to create just the Jenkins jobs for deploying an application into production environments following such a resource copying operation. The following steps are performed in order to do this:
 
 1. Generate a Jenkinsfile that will be used to deploy the application into prod. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the deployment's owning pipeline has no tag.
-2. Create a Jenkins build job that uses the generated Jenkinsfile to deploy your Application. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
+2. Create a Jenkins build job that uses the generated Jenkinsfile to deploy your Application. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related to the Application being deployed.
 
 ---
 #### `sub configure custom package`
@@ -164,12 +164,12 @@ Once all of these details are specified the following actions are performed:
     1. Generate a Jenkinsfile that will build and deploy your application through your default pipeline. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile`.
     2. Create a Jenkins build job that uses the generated Jenkinsfile to build your Application. The build job is also added to a Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
 3. For each environment in each release pipeline in your project, configure the Jenkins deployment process:
-    1. Generate a Jenkinsfile that will be used to deploy the application into the environment. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the environment's owning pipeline has no tag.
-    2. Create a Jenkins build job that uses the generated Jenkinsfile to promote your Application from the previous environment. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
+    1. Generate a Jenkinsfile that will be used to deploy the application into the environment. The Jenkinsfile is then added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the environment's owning pipeline has no tag.
+    2. Create a Jenkins build job that uses the generated Jenkinsfile to promote your Application from the previous environment. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related to the Application being deployed.
 
 **For Libraries:**
 
-1. Generate a Jenkinsfile that will build your Library. This Jenkinsfile should be modified by the user to push your artifacts somewhere they can be reused from. The Jenkinsfile is the added to your Library repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile`.
+1. Generate a Jenkinsfile that will build your Library. This Jenkinsfile should be modified by the user to push your artifacts somewhere they can be reused from. The Jenkinsfile is then added to your Library repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile`.
 2. Create a Jenkins build job that uses the generated Jenkinsfile to build your Library.
 
 ---
@@ -186,7 +186,7 @@ The system administrators should create custom Package Definitions for the most 
 
 ---
 #### `sub configure project bitbucket access`
-This command is used to assign the necessary permissions to a Project's associated Bitbucket Project. This is useful if either the Subatomic service account has lost permissions, users permissions were change, or your repositories have been migrated to a new Bitbucket instance. In particular the following permissions are set up:
+This command is used to assign the necessary permissions to a Project's associated Bitbucket Project. This is useful if either the Subatomic service account has lost permissions, users permissions were changed, or your repositories have been migrated to a new Bitbucket instance. In particular the following permissions are set up:
 
 1. Give the Subatomic service account admin permissions.
 2. Give Team owners admin permissions.
@@ -202,7 +202,7 @@ This command can be used to either add a PersistentVolumeClaim to a particular e
 
 ---
 #### `sub create project` 
-This command will can be used to create a new Subatomic Project associated to a particular Team. This just creates the metadata representation of the project within the Subatomic database. After creating a Project, you will need to associate it to a Bitbucket Project which you should be prompted for. More information about associating a Subatomic Project to a Bitbucket project can be found [here](#sub-link-bitbucket-project). Once the Project has been fully defined, this captured metadata can then be used as the input into 'templates' that create things such as [new OpenShift environments](#sub-request-project-environments), or [Jenkins build jobs](#sub-project-request-jenkins-job).
+This command can be used to create a new Subatomic Project associated to a particular Team. This just creates the metadata representation of the project within the Subatomic database. After creating a Project, you will need to associate it to a Bitbucket Project which you should be prompted for. More information about associating a Subatomic Project to a Bitbucket project can be found [here](#sub-link-bitbucket-project). Once the Project has been fully defined, this captured metadata can then be used as the input into 'templates' that create things such as [new OpenShift environments](#sub-request-project-environments), or [Jenkins build jobs](#sub-project-request-jenkins-job).
 
 ---
 #### `sub create team` 
@@ -293,7 +293,7 @@ This command can be used to request moving an Application into production. The c
 
 ---
 #### `sub request devops environment` 
-A DevOps environment is an OpenShift namespace which acts as shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additionally infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: 
+A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: 
 
 1. Create the OpenShift namespace for the Team. This will be named `${teamName}-${devops}` using kebab casing.
 2. Apply the system admin set default OpenShift Limits and Quota's to the new namespace.
@@ -309,7 +309,7 @@ This command can be used to request moving all OpenShift resources in a non prod
 
 ---
 #### `sub request project environments` 
-After creating a Subatomic Project, a user can request that the Project have OpenShift environments provisioned for it's use. When requesting these environments, if the Project has not had it's build/dev and release pipelines defined, the Project will be assigned a default pipeline structure. The following actions are then performed:
+After creating a Subatomic Project, a user can request that the Project have OpenShift environments provisioned for its use. When requesting these environments, if the Project has not had its build/dev and release pipelines defined, the Project will be assigned a default pipeline structure. The following actions are then performed:
 
 1. Configure the Project OpenShift resources:
     1. Create an OpenShift namespace created for each environment of each deployment and release pipeline associated to a Project.
@@ -322,7 +322,7 @@ After creating a Subatomic Project, a user can request that the Project have Ope
 
 ---
 #### `sub request project prod` 
-In order to promote Applications' to production, you need to have production environments available to deploy the Application's into. This command will allow users to provision these production environments for a selected Project and deployment pipeline. The process follows the following approach:
+In order to promote Applications to production, you need to have production environments available to deploy the Application's into. This command will allow users to provision these production environments for a selected Project and deployment pipeline. The process follows the following approach:
 
 1. Request that the Team members put their names down in a sign off process to approve that the Project is ready for production:
     1. If a user rejects the approval request, the entire Prod Request is cancelled.
