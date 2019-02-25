@@ -10,12 +10,12 @@ Bitbucket commands that control Bitbucket project configuration and access contr
 1. [`sub apply bitbucket practices`](#sub-apply-bitbucket-practices) - Apply recommended practices to Bitbucket project
 
 ###  **Jenkins Commands**
-Jenkins commands that allow the user to control builds and jenkins configuration
+Jenkins commands that allow the user to control builds and Jenkins configuration
 
-1. [`sub configure application jenkins prod`](#sub-configure-application-jenkins-prod) - Add a prod deployment job to jenkins for an application
+1. [`sub configure application jenkins prod`](#sub-configure-application-jenkins-prod) - Add a prod deployment job to Jenkins for an application
 2. [`sub create jenkins bitbucket credentials`](#sub-create-jenkins-bitbucket-credentials) - Recreate the Jenkins Bitbucket Credentials
 3. [`sub jenkins build`](#sub-jenkins-build) - Kick off a Jenkins build
-4. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a jenkins build folder for a given project
+4. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
 
 ###  **Member Commands**
 Member commands allow you to manage Subatomic members. These include editing Slack details, on-boarding, editing user roles and adding members to teams.
@@ -28,16 +28,16 @@ Member commands allow you to manage Subatomic members. These include editing Sla
 ###  **Package Commands**
 Package commands are related to managing applications and libraries. These include deployment, build, prod promotion and image management.
 
-1. [`sub configure application jenkins prod`](#sub-configure-application-jenkins-prod) - Add a prod deployment job to jenkins for an application
+1. [`sub configure application jenkins prod`](#sub-configure-application-jenkins-prod) - Add a prod deployment job to Jenkins for an application
 2. [`sub configure package`](#sub-configure-package) - Configure an existing application/library using a predefined template
-3. [`sub configure custom package`](#sub-configure-custom-package) - Configure an existing application/library manually specifying all build/deplyoment details.
+3. [`sub configure custom package`](#sub-configure-custom-package) - Configure an existing application/library manually specifying all build/deployment details.
 4. [`sub request application prod`](#sub-request-application-prod) - Create application in prod
 5. [`sub link application`](#sub-link-application) - Link an existing application
 6. [`sub link library`](#sub-link-library) - Link an existing library
 7. [`sub patch package s2i image`](#sub-patch-package-s2i-image) - Patch the s2i image used to build a package
 
 ###  **Project Commands**
-Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, jenkins and Bitbucket configuration.
+Project commands provide management capabilities around individual Projects and their associated resources. This includes environment management, application and library creation, Jenkins and Bitbucket configuration.
 
 1. [`sub associate team`](#sub-associate-team) - Add additional team/s to a project
 2. [`sub configure project bitbucket access`](#sub-configure–project-bitbucket–access) - Reconfigure user and system access to Bitbucket for an existing project
@@ -51,7 +51,7 @@ Project commands provide management capabilities around individual Projects and 
 10. [`sub link bitbucket project`](#sub-link-bitbucket-project) - You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
 11. [`sub list projects`](#sub-list-projects) - List projects belonging to a team
 12. [`sub request project environments`](#sub-request-project-environments) - Create new OpenShift environments for a project
-13. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a jenkins build folder for a given project
+13. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
 
 ###  **Team Commands**
 Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.
@@ -64,19 +64,19 @@ Team commands allow you to manage your Subatomic team. These include team member
 6. [`sub apply to team`](#sub-apply-to-team) - Apply to join an existing team
 7. [`sub link team channel`](#sub-link-team-channel) - If you already have an existing slack channel use this command. Subatomic will add the atomist bot to this channel, however if the channel is private you will need to manually invite the bot.
 8. [`sub list team members`](#sub-list-team-members) - Displays members and owners of the team.
-9. [`sub team migrate cloud`](#sub-team-migrate-cloud) - Move all Openshift resources belonging to a team to a different cloud
-10. `sub request devops environment` - Check whether to create a new OpenShift DevOps environment or use an existing one
-11. `sub create team channel` - This will create a public slack channel, if you want a private channel you will need to create it manually then run [`sub link team channel`](#sub-link-team-channel) command.
-12. `sub remove team member` - Removes a member (not owner) from a team.
-13. `sub tag all images` - Tag all latest subatomic images to a devops environment
-14. `sub tag image` - Tag an individual subatomic image to a devops environment
+9. [`sub team migrate cloud`](#sub-team-migrate-cloud) - Move all OpenShift resources belonging to a team to a different cloud
+10. [`sub request devops environment`](#sub-request-devops-environment) - Create a DevOps environment for a selected Team.
+11. [`sub create team channel`](#sub-create-team-channel) - This will create a public slack channel, if you want a private channel you will need to create it manually then run [`sub link team channel`](#sub-link-team-channel) command.
+12. [`sub remove team member`](#sub-remove-team-member) - Removes a member from a team.
+13. [`sub tag all images`](#sub-tag-all-images) - Tag all latest subatomic images to a DevOps environment
+14. [`sub tag image`](#sub-tag-image) - Tag an individual subatomic image to a DevOps environment
 
 ###  **Other Commands**
 All other general/miscellaneous commands
 
-1. `sub create openshift pvc` - Create a new OpenShift Persistent Volume Claim
-2. `sub team migrate cloud` - Move all Openshift resources belonging to a team to a different cloud
-3. `sub help` - Displays an interactive help menu
+1. [`sub create openshift pvc`](#sub-create-openshift-pvc) - Create a new OpenShift Persistent Volume Claim
+2. [`sub team migrate cloud`](#sub-team-migrate-cloud) - Move all OpenShift resources belonging to a team to a different cloud
+3. [`sub help`](#sub-help) - Displays a help menu as a Slack browsable form of the Quick Reference section of this page.
 
 ## Detailed Reference
 This section is dedicated to explaining in detail what each command does. The subatomic environment is designed to speed up developer workflow, but it should never prevent users from using the underlying stack directly if needed or desired.
@@ -94,7 +94,7 @@ This command is used to create a [Spring Cloud Config](https://spring.io/project
 
 ---
 #### `sub add team owner`
-This is used to directly add a user to a Team you are the owner of with owner permissions. The user will need to have been onboarded before you can add them to the Team. Adding user as an owner performs the following operations:
+This is used to directly add a user to a Team you are the owner of with owner permissions. The user will need to have been on-boarded before you can add them to the Team. Adding user as an owner performs the following operations:
 
 1. Associate the user to the Team in the Subatomic database as an owner.
 2. Add the user to all OpenShift namespaces associated to the Team and grant them Admin permissions.
@@ -104,7 +104,7 @@ This is used to directly add a user to a Team you are the owner of with owner pe
 
 ---
 #### `sub add team member`
-This is used to directly add a user to a Team you are the owner of with member permissions. The user will need to have been onboarded before you can add them to the Team. Adding user as a member performs the following operations:
+This is used to directly add a user to a Team you are the owner of with member permissions. The user will need to have been on-boarded before you can add them to the Team. Adding user as a member performs the following operations:
 
 1. Associate the user to the Team in the Subatomic database as a member.
 2. Add the user to all OpenShift namespaces associated to the Team and grant them Write permissions.
@@ -164,7 +164,7 @@ Once all of these details are specified the following actions are performed:
     1. Generate a Jenkinsfile that will build and deploy your application through your default pipeline. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile`.
     2. Create a Jenkins build job that uses the generated Jenkinsfile to build your Application. The build job is also added to a Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
 3. For each environment in each release pipeline in your project, configure the Jenkins deployment process:
-    1. Generate a Jenkinsfile that will be used to deploy the application into the environment. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the evironment's owning pipeline has no tag.
+    1. Generate a Jenkinsfile that will be used to deploy the application into the environment. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the environment's owning pipeline has no tag.
     2. Create a Jenkins build job that uses the generated Jenkinsfile to promote your Application from the previous environment. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
 
 **For Libraries:**
@@ -182,11 +182,11 @@ When a Package(either an Application or Library) is created in Subatomic, there 
 - The environment variables to set in the Deployment Configs created in each OpenShift environment.
 - The default Jenkinsfile to add to the Package repository (This is the only configuration entry used for a Library).
 
-The system administrators should create custom Package Definitions for the most common types of Packages used in your orginization and these should appear in the dropdown for selection. After selecting a Package Definition to use all the information is passed through to the `sub configure custom package` command. To find out more about this command click [here](#sub-configure-custom-package).
+The system administrators should create custom Package Definitions for the most common types of Packages used in your orginisation and these should appear in the dropdown for selection. After selecting a Package Definition to use all the information is passed through to the `sub configure custom package` command. To find out more about this command click [here](#sub-configure-custom-package).
 
 ---
 #### `sub configure project bitbucket access`
-This command is used to assign the necessary permissions to a Project's associated Bitbucket Project. This is useful if either the Subatomic service account has lost permissions, users permissions were change, or your repositories have been migrated to a new Bitbucket instance. Inparticular the following permissions are set up:
+This command is used to assign the necessary permissions to a Project's associated Bitbucket Project. This is useful if either the Subatomic service account has lost permissions, users permissions were change, or your repositories have been migrated to a new Bitbucket instance. In particular the following permissions are set up:
 
 1. Give the Subatomic service account admin permissions.
 2. Give Team owners admin permissions.
@@ -198,7 +198,7 @@ This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket
 
 ---
 #### `sub create openshift pvc` 
-This command can be used to either add a PersistantVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.
+This command can be used to either add a PersistentVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.
 
 ---
 #### `sub create project` 
@@ -209,12 +209,27 @@ This command will can be used to create a new Subatomic Project associated to a 
 This command can be used to create a new Subatomic Team. This only creates the metadata model of the Team in the Subatomic database. This can then be used as the base to create a DevOps environment and create new Project's under. **Note:** When creating a new team, the user that executes the command will be made the owner of this Team.
 
 ---
+#### `sub create team channel` 
+This command will create a Slack channel with the supplied name and assign it as the Team's associated Subatomic Slack channel. The following actions are performed when running this command:
+
+1. Create a Slack channel with the chosen name.
+2. Assign the Slack channel to the Team's associated Subatomic slack channel in the Subatomic database.
+3. Invite the Atomist bot to the newly created Slack channel.
+4. Invite all Team owners and members to the newly created Slack channel.
+
+**Note:** When following the message prompts after creating a Team, the Slack channel will automatically be created using the Team's name in kebab case format.
+
+---
+#### `sub help`
+Displays a help menu as a Slack browsable form of the Quick Reference section of this page.
+
+---
 #### `sub jenkins build`
 This will kick off a Jenkins dev pipeline build for a selected application. That is it will run the build associated to the standard Jenkinsfile for an Application, and not the additional deployment jobs associated to the Application.
 
 ---
 #### `sub link application`
-This will prompt a user for details about an Application they wish to allow Subatomic to manage. This will require an existing initialised repository in the Bitbucket project associated to the Application's intended owning Subatomic Project. This creates the metadata representation of the Applicaiton within the Subatomic database. Once the Application has been created the user needs to decide how Subatomic should treat the Application. See [sub configure package](#sub-configure-package) for more details.
+This will prompt a user for details about an Application they wish to allow Subatomic to manage. This will require an existing initialised repository in the Bitbucket project associated to the Application's intended owning Subatomic Project. This creates the metadata representation of the Application within the Subatomic database. Once the Application has been created the user needs to decide how Subatomic should treat the Application. See [sub configure package](#sub-configure-package) for more details.
 
 ---
 #### `sub link bitbucket project`
@@ -226,7 +241,7 @@ This will prompt a user for details about a Library they wish to allow Subatomic
 
 ---
 #### `sub link team channel`
-This command allows a user to link their Team to a new Slack channel for notification purposes. The Slack channel needs to exist for this command to work correctly. This is particulary useful if the currently associated Team channel was renamed, if you want to use a private slack channel(\*) for the team notifications, or if you have an existing channel you wish to use for the notifactions and Subatomic control flow interaction. When linking a Team to a new Slack channel the following actions are performed:
+This command allows a user to link their Team to a new Slack channel for notification purposes. The Slack channel needs to exist for this command to work correctly. This is particularly useful if the currently associated Team channel was renamed, if you want to use a private slack channel(\*) for the team notifications, or if you have an existing channel you wish to use for the notifications and Subatomic control flow interaction. When linking a Team to a new Slack channel the following actions are performed:
 1. Invite the Members of the Team to the Slack channel.
 2. Invite the Atomist Bot to the Team Channel.
 
@@ -240,7 +255,7 @@ This command is used to provide users a way to view the details around what Proj
 
 ---
 #### `sub list team members`
-This will present a list of the Team owners and users. This is useful to know who can peform actions that require ownership permission.
+This will present a list of the Team owners and users. This is useful to know who can perform actions that require ownership permission.
 
 ---
 #### `sub onboard me` 
@@ -252,11 +267,21 @@ This looks up the latest versions of s2i ImageStream's available, tags a selecte
 
 ---
 #### `sub project request jenkins job`
-This requests a build folder for a specific project be created. This can either be useful if the build folder is deleted, or a user wants to create builds for a project without creating the OpenShift environments. The usecase for the latter being when a Project only contains libraries and no deployable applications. This performs the following operations:
+This requests a build folder for a specific project be created. This can either be useful if the build folder is deleted, or a user wants to create builds for a project without creating the OpenShift environments. The use case for the latter being when a Project only contains libraries and no deployable applications. This performs the following operations:
 
 1. Create the build folder for the Project. The build folder uses the Project's name to name the build folder.
-2. Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev Openshift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.
+2. Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev OpenShift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.
 3. Create the Bitbucket authorization credential. This is used by Jenkins to clone sources from the configured Bitbucket instance.
+
+---
+#### `sub remove team member` 
+This command is used to remove a member from a Team. When removing a member from a team, the following actions are performed:
+
+1. Remove the Subatomic association between the user and the Team.
+2. Remove the user's permissions from all OpenShift namespaces associated to the Team.
+3. Remove the user's permissions from the Bitbucket project's associated to the Team.
+4. Kick the user from the Team's Slack channel.
+
 
 ---
 #### `sub request application prod` 
@@ -265,6 +290,18 @@ This command can be used to request moving an Application into production. The c
 1. Move across all identified resources into each production environment.
 2. Generate a Jenkinsfile that will be used to deploy the application into prod. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the deployment's owning pipeline has no tag.
 3. Create a Jenkins build job that uses the generated Jenkinsfile to deploy your Application. The build job is also added to the Jenkins Job View which holds all the Jenkins jobs related the Application being deployed.
+
+---
+#### `sub request devops environment` 
+A DevOps environment is an OpenShift namespace which acts as shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additionally infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: 
+
+1. Create the OpenShift namespace for the Team. This will be named `${teamName}-${devops}` using kebab casing.
+2. Apply the system admin set default OpenShift Limits and Quota's to the new namespace.
+3. Give all Team members write permissions to the DevOps namespace.
+4. Give all Team owners admin permissions to the DevOps namespace.
+5. Copy all Subatomic application templates to the DevOps namespace from the Subatomic namespace.
+6. Tag all Subatomic S2I, Jenkins, and config server ImageStreams to the DevOps namespace from the Subatomic namespace.
+7. Create a secret `bitbucket-ssh` which contains the credentials required by the shared DevOps applications to access Bitbucket.
 
 ---
 #### `sub request generic prod` 
@@ -276,11 +313,11 @@ After creating a Subatomic Project, a user can request that the Project have Ope
 
 1. Configure the Project OpenShift resources:
     1. Create an OpenShift namespace created for each environment of each deployment and release pipeline associated to a Project.
-    2. Assign default OpenShift Quota and Limits and apply a standard OpenShift Project namespace template to these namespaces. The default template, Quota's, and Limits, will be customised by your System Admin to meet the requirement of the organisation space.
+    2. Assign default OpenShift Quota and Limits and apply a standard OpenShift Project namespace template to these namespaces. The default template, Quota's, and Limits, will be customised by your System Admin to meet the requirement of the organisation's space.
     3. Create a Pod Network between each OpenShift Project Namespace and the Team's DevOps namespace. This allows the Applications in the Project namespaces to access Application's in the DevOps space via service URI's (e.g. accessing the DevOps Config Server).
 2. Configure the Project in Jenkins:
     1. Create the build folder for the Project. The build folder uses the Project's name to name the build folder.
-    2. Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev Openshift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.
+    2. Create the environment name credentials within the build folder/job domain. These credentials store the OpenShift namespaces for each environment in your pipeline. E.g. "DEV_PROJECT" - Dev OpenShift Project, "TZA_UAT_PROJECT" - UAT OpenShift project for the TZA deployment pipeline.
     3. Create the Bitbucket authorization credential. This is used by Jenkins to clone sources from the configured Bitbucket instance.
 
 ---
@@ -298,12 +335,18 @@ In order to promote Applications' to production, you need to have production env
 Once a Project pipeline has been moved to production then the Applications within the Project can be setup to move into production. For more information on this look at [`sub request generic prod`](#sub-request-generic-prod) and [`sub request application prod`](#sub-request-application-prod).
 
 ---
+#### `sub tag all images` 
+This command tags all the latest version of the S2I, Jenkins, and Config Server ImageStreams to a Team's DevOps environment from the Subatomic namespace.
+
+---
+#### `sub tag image` 
+This command tags latest version of a particular ImageStream to a Team's DevOps environment from the Subatomic namespace.
+
+---
 #### `sub team migrate cloud` 
-When a Team in Subatomic is created, it is associated to a particular "cloud". A cloud represents a group of OpenShift clusters that are grouped into a non prod cluster, and multiple production clusters. Provided that the Subatomic deployment has been configured to use multiple of these "clouds" this command can be used to migrate a Team and all associated Projects from one cloud to another cloud. The steps in this operation are as follows:
+When a Team in Subatomic is created, it is associated to a particular "cloud". A cloud represents a group of OpenShift clusters that are grouped into a non prod cluster, and multiple production clusters. Provided that the Subatomic deployment has been configured to use multiple "clouds", this command can be used to migrate a Team and all associated Projects from one cloud to another cloud. The steps in this operation are as follows:
 
 1. Create a new DevOps environment on the new cloud's non prod cluster.
 2. Recreate all OpenShift namespaces from all Projects associated to the Team being migrated.
 3. Copy all OpenShift resources from the original environments to the newly created OpenShift environments. This includes DeploymentConfig, Service, Route, PersistentVolumeClaim, and ImageStream resources.
 4. Recreate the Jenkins build jobs for each Application associated to the Project.
-
----
