@@ -138,7 +138,7 @@ This allows users to associate additional Teams to a Subatomic Project. Users of
 
 ---
 #### `sub configure application jenkins prod`
-When running a Generic Prod request, all OpenShift resources in the highest non-prod environment are indiscriminately moved over to the production environments. This is just a straight copy of the resources, and does not configure any Jenkins jobs for Application production deployments.
+When running a Generic Prod request, all OpenShift resources in the highest non-prod environment are indiscriminately moved over to the production environments. This is just a straight copy of the resources, and **does not** configure any Jenkins jobs for Application production deployments.
 This command is used to create just the Jenkins jobs for deploying an application into production environments following such a resource copying operation. The following steps are performed in order to do this:
 
 1. Generate a Jenkinsfile that will be used to deploy the application into prod. The Jenkinsfile is the added to your Application repository if it does not exist. The name of the Jenkinsfile is `Jenkinsfile.[${pipelineTag}.]${environmentPostfix}` where `[${pipelineTag}.]` is not present if the deployment's owning pipeline has no tag.
@@ -174,7 +174,7 @@ Once all of these details are specified the following actions are performed:
 
 ---
 #### `sub configure package`
-When a Package(either an Application or Library) is created in Subatomic, there are no details captured about how it should be built or deployed. It is just a piece of metadata describing the details of a Package's name, whether it is deployable, where it's source code lives etc. The user needs to then tell Subatomic how they wish to build/deploy this Package. Running this command presents the user with a prompt to decide what Package Defintion to apply to the Package. A Package Definition is a preset configuration file which describes the following:
+When a Package(either an Application or Library) is created in Subatomic, there are no details captured about how it should be built or deployed. It is just a piece of metadata describing the details of a Package's name, whether it is deployable, where it's source code lives etc. The user needs to then tell Subatomic how they wish to build/deploy this Package. Running this command presents the user with a prompt to decide what Package Definition to apply to the Package. A Package Definition is a preset configuration file which describes the following:
 
 - The S2I ImageStream to use to build an Application.
 - The environment variables to set during the S2I build.
@@ -194,7 +194,7 @@ This command is used to assign the necessary permissions to a Project's associat
 
 ---
 #### `sub create jenkins bitbucket credentials`
-This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket and clone sources used in builds. This should only need to be run in the Service Account credentials have changed.
+This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket and clone sources used in builds. This should only need to be run if the Service Account credentials have changed.
 
 ---
 #### `sub create openshift pvc` 
@@ -275,13 +275,14 @@ This requests a build folder for a specific project be created. This can either 
 
 ---
 #### `sub remove team member` 
-This command is used to remove a member from a Team. When removing a member from a team, the following actions are performed:
+This command is used to remove a member from a Team. This action can only be performed by a Team owner. When removing a member from a team, the following actions are performed:
 
 1. Remove the Subatomic association between the user and the Team.
 2. Remove the user's permissions from all OpenShift namespaces associated to the Team.
 3. Remove the user's permissions from the Bitbucket project's associated to the Team.
 4. Kick the user from the Team's Slack channel.
 
+**Note:** Team owners can also be removed (including self removal), provided that there is currently more than 1 Team owner.
 
 ---
 #### `sub request application prod` 
