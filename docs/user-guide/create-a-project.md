@@ -49,16 +49,19 @@ Click the "Create OpenShift environments" button. This command can also be invok
 
 > For details on the use of this command please see [here](../quantum-mechanic/command-reference.md#project-commands)
 
-You will be notified that your Openshift environments are being provisioned successfully.
+When you click the "Create OpenShift environments" button, you will be prompted to choose the pipeline configuration for your project. The pipeline configuration defines what environments your project will have created for it in OpenShift.
+
+![Define Project Pipeline](/images/user-guide/create-a-project/define-new-pipelines.png)
+
+You are prompted with two options: Default Pipeline and Minimal Pipeline. The exact environments that each is defined by will change depending on the Subatomic system configuration. In this example the Default Pipeline will create Dev, SIT, and UAT environments, whilst the Minimal Pipeline will create only a Dev and UAT environment. Choose the Default Pipeline option. You will then be notified that your Openshift environments are being provisioned successfully.
 
 ![Openshift Environments Created OK](/images/user-guide/create-a-project/envs-created.png)
- 
- 
+
 Once they are complete they should be visible in your Openshift instance.
 
 ![Openshift Environments](/images/user-guide/create-a-project/openshift-environments.png)
 
-Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.
+These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.
 
 ## **Add an Application**
 
