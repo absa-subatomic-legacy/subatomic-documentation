@@ -541,11 +541,13 @@
 <blockquote>
 <p>For details on the use of this command please see <a href="../../quantum-mechanic/command-reference/#project-commands">here</a></p>
 </blockquote>
-<p>You will be notified that your Openshift environments are being provisioned successfully.</p>
+<p>When you click the "Create OpenShift environments" button, you will be prompted to choose the pipeline configuration for your project. The pipeline configuration defines what environments your project will have created for it in OpenShift.</p>
+<p><img alt="Define Project Pipeline" src="/images/user-guide/create-a-project/define-new-pipelines.png" /></p>
+<p>You are prompted with two options: Default Pipeline and Minimal Pipeline. The exact environments that each is defined by will change depending on the Subatomic system configuration. In this example the Default Pipeline will create Dev, SIT, and UAT environments, whilst the Minimal Pipeline will create only a Dev and UAT environment. Choose the Default Pipeline option. You will then be notified that your Openshift environments are being provisioned successfully.</p>
 <p><img alt="Openshift Environments Created OK" src="/images/user-guide/create-a-project/envs-created.png" /></p>
 <p>Once they are complete they should be visible in your Openshift instance.</p>
 <p><img alt="Openshift Environments" src="/images/user-guide/create-a-project/openshift-environments.png" /></p>
-<p>Currently the DEV, SIT, and UAT environments are the default and only option. These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.</p>
+<p>These will host all the applications within the project you have created. The environments have user permissions and quotas automatically configured for your team.</p>
 <h2 id="add-an-application"><strong>Add an Application</strong></h2>
 <p>Once the project environments are provisioned you should be prompted to create a new application in the project.</p>
 <p><img alt="Create Application" src="/images/user-guide/create-a-project/create-an-application.png" /></p>
