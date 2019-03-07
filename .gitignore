@@ -1,2 +1,5 @@
 .idea/*
 subatomic-documentation.iml
+venv
+site
+*.DS_Store
