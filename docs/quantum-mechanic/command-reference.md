@@ -199,6 +199,7 @@ This will recreate the default credentials used by Jenkins. This can be run if t
 3. Docker - Stores the Docker registry url used to specify locations of images that Jenkins uses (e.g. Jenkins agent images)
 4. Shared Resources Namespace - Stores the name of the Subatomic shared resource OpenShift namespace. This is used to know which namespace to look for centralised images in.
 5. Maven - This is the default Maven settings used in Maven builds.
+6. Production Access Tokens - This is the service account tokens used to access production environments. These are only created if a project associated to the team has been promoted to prod.
 
 ---
 #### `sub create openshift pvc` 
