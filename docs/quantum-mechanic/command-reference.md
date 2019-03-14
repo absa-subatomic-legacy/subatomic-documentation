@@ -296,7 +296,7 @@ This command can be used to request moving an Application into production. The c
 A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: 
 
 1. Create the OpenShift namespace for the Team. This will be named `${teamName}-${devops}` using kebab casing.
-2. Give the DevOps environment's default service account the `system:image-puller` role in the defined centralised resource namespace so that it can access the Subatomic S2I images.
+2. Give the DevOps environment's builder service account the `system:image-puller` role in the defined centralised resource namespace so that it can access the Subatomic S2I images.
 3. Apply the system admin defined default OpenShift Limits and Quota's to the new namespace.
 4. Give all Team members write permissions to the DevOps namespace.
 5. Give all Team owners admin permissions to the DevOps namespace.
