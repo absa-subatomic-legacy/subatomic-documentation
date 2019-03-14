@@ -43,15 +43,14 @@ Project commands provide management capabilities around individual Projects and 
 2. [`sub configure project bitbucket access`](#sub-configure–project-bitbucket–access) - Reconfigure user and system access to Bitbucket for an existing project
 3. [`sub apply bitbucket practices`](#sub-apply-bitbucket-practices) - Apply recommended practices to Bitbucket project
 4. [`sub request generic prod`](#sub-request-generic-prod) - Move OpenShift resources to prod
-5. [`sub create openshift pvc`](#sub-create-openshift-pvc) - Create a new OpenShift Persistent Volume Claim
-6. [`sub create project`](#sub-create-project) - Create a new project. You will need to input two values `project name` and `project description`.
-7. [`sub request project prod`](#sub-request-project-prod) - Create the OpenShift production environments for a project and a particular pipeline.
-8. [`sub link application`](#sub-link-application) - Link an existing application
-9. [`sub link library`](#sub-link-library) - Link an existing library
-10. [`sub link bitbucket project`](#sub-link-bitbucket-project) - You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
-11. [`sub list projects`](#sub-list-projects) - List projects belonging to a team
-12. [`sub request project environments`](#sub-request-project-environments) - Create new OpenShift environments for a project
-13. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
+5. [`sub create project`](#sub-create-project) - Create a new project. You will need to input two values `project name` and `project description`.
+6. [`sub request project prod`](#sub-request-project-prod) - Create the OpenShift production environments for a project and a particular pipeline.
+7. [`sub link application`](#sub-link-application) - Link an existing application
+8. [`sub link library`](#sub-link-library) - Link an existing library
+9. [`sub link bitbucket project`](#sub-link-bitbucket-project) - You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
+10. [`sub list projects`](#sub-list-projects) - List projects belonging to a team
+11. [`sub request project environments`](#sub-request-project-environments) - Create new OpenShift environments for a project
+12. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
 
 ###  **Team Commands**
 Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.
@@ -72,9 +71,8 @@ Team commands allow you to manage your Subatomic team. These include team member
 ###  **Other Commands**
 All other general/miscellaneous commands
 
-1. [`sub create openshift pvc`](#sub-create-openshift-pvc) - Create a new OpenShift Persistent Volume Claim
-2. [`sub team migrate cloud`](#sub-team-migrate-cloud) - Move all OpenShift resources belonging to a team to a different cloud
-3. [`sub help`](#sub-help) - Displays a help menu as a Slack browsable form of the Quick Reference section of this page.
+1. [`sub team migrate cloud`](#sub-team-migrate-cloud) - Move all OpenShift resources belonging to a team to a different cloud
+2. [`sub help`](#sub-help) - Displays a help menu as a Slack browsable form of the Quick Reference section of this page.
 
 ## Detailed Reference
 This section is dedicated to explaining in detail what each command does. The subatomic environment is designed to speed up developer workflow, but it should never prevent users from using the underlying stack directly if needed or desired.
@@ -202,10 +200,6 @@ This will recreate the default credentials used by Jenkins. This can be run if t
 6. Production Access Tokens - This is the service account tokens used to access production environments. These are only created if a project associated to the team has been promoted to prod.
 
 ---
-#### `sub create openshift pvc` 
-This command can be used to either add a PersistentVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.
-
----
 #### `sub create project` 
 This command can be used to create a new Subatomic Project associated to a particular Team. This just creates the metadata representation of the project within the Subatomic database. After creating a Project, you will need to associate it to a Bitbucket Project which you should be prompted for. More information about associating a Subatomic Project to a Bitbucket project can be found [here](#sub-link-bitbucket-project). Once the Project has been fully defined, this captured metadata can then be used as the input into 'templates' that create things such as [new OpenShift environments](#sub-request-project-environments), or [Jenkins build jobs](#sub-project-request-jenkins-job).
 
@@ -302,12 +296,14 @@ This command can be used to request moving an Application into production. The c
 A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: 
 
 1. Create the OpenShift namespace for the Team. This will be named `${teamName}-${devops}` using kebab casing.
-2. Apply the system admin set default OpenShift Limits and Quota's to the new namespace.
-3. Give all Team members write permissions to the DevOps namespace.
-4. Give all Team owners admin permissions to the DevOps namespace.
-5. Create a secret `bitbucket-ssh` which contains the credentials required by the shared DevOps applications to access Bitbucket.
-6. Deploy an instance of Jenkins.
-7. Load in all the credentials required by Jenkins. More information on these credentials can be found [here](#sub-create-jenkins-default-credentials)
+2. Give the DevOps environment's default service account the `system:image-puller` role in the defined centralised resource namespace so that it can access the Subatomic S2I images.
+3. Apply the system admin defined default OpenShift Limits and Quota's to the new namespace.
+4. Give all Team members write permissions to the DevOps namespace.
+5. Give all Team owners admin permissions to the DevOps namespace.
+6. Create a secret `bitbucket-ssh` which contains the credentials required by the shared DevOps applications to access Bitbucket.
+7. Deploy an instance of Jenkins.
+8. Give the Jenkins service account the `system:image-puller` role in the defined centralised resource namespace so that it can access the Subatomic Jenkins agent images.
+9. Load in all the credentials required by Jenkins. More information on these credentials can be found [here](#sub-create-jenkins-default-credentials)
 
 ---
 #### `sub request generic prod` 
