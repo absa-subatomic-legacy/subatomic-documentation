@@ -48,9 +48,9 @@ Project commands provide management capabilities around individual Projects and 
 7. [`sub link application`](#sub-link-application) - Link an existing application
 8. [`sub link library`](#sub-link-library) - Link an existing library
 9. [`sub link bitbucket project`](#sub-link-bitbucket-project) - You will need to input your `bitbucket project key` and Subatomic will find the existing project within Bitbucket.
-11. [`sub list projects`](#sub-list-projects) - List projects belonging to a team
-12. [`sub request project environments`](#sub-request-project-environments) - Create new OpenShift environments for a project
-13. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
+10. [`sub list projects`](#sub-list-projects) - List projects belonging to a team
+11. [`sub request project environments`](#sub-request-project-environments) - Create new OpenShift environments for a project
+12. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
 
 ###  **Team Commands**
 Team commands allow you to manage your Subatomic team. These include team membership, team projects and DevOps environment configuration.
