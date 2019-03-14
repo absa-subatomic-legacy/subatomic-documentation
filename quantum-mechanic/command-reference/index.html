@@ -1340,7 +1340,7 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <p>A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: </p>
 <ol>
 <li>Create the OpenShift namespace for the Team. This will be named <code>${teamName}-${devops}</code> using kebab casing.</li>
-<li>Give the DevOps environment's default service account the <code>system:image-puller</code> role in the defined centralised resource namespace so that it can access the Subatomic S2I images.</li>
+<li>Give the DevOps environment's builder service account the <code>system:image-puller</code> role in the defined centralised resource namespace so that it can access the Subatomic S2I images.</li>
 <li>Apply the system admin defined default OpenShift Limits and Quota's to the new namespace.</li>
 <li>Give all Team members write permissions to the DevOps namespace.</li>
 <li>Give all Team owners admin permissions to the DevOps namespace.</li>
