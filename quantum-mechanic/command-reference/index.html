@@ -536,13 +536,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-create-openshift-pvc" title="sub create openshift pvc" class="md-nav__link">
-    sub create openshift pvc
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sub-create-project" title="sub create project" class="md-nav__link">
     sub create project
   </a>
@@ -897,13 +890,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-create-openshift-pvc" title="sub create openshift pvc" class="md-nav__link">
-    sub create openshift pvc
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sub-create-project" title="sub create project" class="md-nav__link">
     sub create project
   </a>
@@ -1116,7 +1102,6 @@
 <li><a href="#sub-configure–project-bitbucket–access"><code>sub configure project bitbucket access</code></a> - Reconfigure user and system access to Bitbucket for an existing project</li>
 <li><a href="#sub-apply-bitbucket-practices"><code>sub apply bitbucket practices</code></a> - Apply recommended practices to Bitbucket project</li>
 <li><a href="#sub-request-generic-prod"><code>sub request generic prod</code></a> - Move OpenShift resources to prod</li>
-<li><a href="#sub-create-openshift-pvc"><code>sub create openshift pvc</code></a> - Create a new OpenShift Persistent Volume Claim</li>
 <li><a href="#sub-create-project"><code>sub create project</code></a> - Create a new project. You will need to input two values <code>project name</code> and <code>project description</code>.</li>
 <li><a href="#sub-request-project-prod"><code>sub request project prod</code></a> - Create the OpenShift production environments for a project and a particular pipeline.</li>
 <li><a href="#sub-link-application"><code>sub link application</code></a> - Link an existing application</li>
@@ -1145,7 +1130,6 @@
 <h3 id="other-commands"><strong>Other Commands</strong></h3>
 <p>All other general/miscellaneous commands</p>
 <ol>
-<li><a href="#sub-create-openshift-pvc"><code>sub create openshift pvc</code></a> - Create a new OpenShift Persistent Volume Claim</li>
 <li><a href="#sub-team-migrate-cloud"><code>sub team migrate cloud</code></a> - Move all OpenShift resources belonging to a team to a different cloud</li>
 <li><a href="#sub-help"><code>sub help</code></a> - Displays a help menu as a Slack browsable form of the Quick Reference section of this page.</li>
 </ol>
@@ -1276,9 +1260,6 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <li>Production Access Tokens - This is the service account tokens used to access production environments. These are only created if a project associated to the team has been promoted to prod.</li>
 </ol>
 <hr />
-<h4 id="sub-create-openshift-pvc"><code>sub create openshift pvc</code></h4>
-<p>This command can be used to either add a PersistentVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.</p>
-<hr />
 <h4 id="sub-create-project"><code>sub create project</code></h4>
 <p>This command can be used to create a new Subatomic Project associated to a particular Team. This just creates the metadata representation of the project within the Subatomic database. After creating a Project, you will need to associate it to a Bitbucket Project which you should be prompted for. More information about associating a Subatomic Project to a Bitbucket project can be found <a href="#sub-link-bitbucket-project">here</a>. Once the Project has been fully defined, this captured metadata can then be used as the input into 'templates' that create things such as <a href="#sub-request-project-environments">new OpenShift environments</a>, or <a href="#sub-project-request-jenkins-job">Jenkins build jobs</a>.</p>
 <hr />
@@ -1359,11 +1340,13 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <p>A DevOps environment is an OpenShift namespace which acts as a shared environment for common infrastructure across all of a Team's Projects. This by default includes a Jenkins instance used to build all Applications and Libraries in a Team's associated Projects and includes all the BuildConfigs used to run the S2I builds for the Team. Additional infrastructure such as a Spring Cloud Config server or Key Cloak server would be added to the DevOps environment and shared across all Project environments. When running this command, the following actions will be performed: </p>
 <ol>
 <li>Create the OpenShift namespace for the Team. This will be named <code>${teamName}-${devops}</code> using kebab casing.</li>
-<li>Apply the system admin set default OpenShift Limits and Quota's to the new namespace.</li>
+<li>Give the DevOps environment's default service account the <code>system:image-puller</code> role in the defined centralised resource namespace so that it can access the Subatomic S2I images.</li>
+<li>Apply the system admin defined default OpenShift Limits and Quota's to the new namespace.</li>
 <li>Give all Team members write permissions to the DevOps namespace.</li>
 <li>Give all Team owners admin permissions to the DevOps namespace.</li>
 <li>Create a secret <code>bitbucket-ssh</code> which contains the credentials required by the shared DevOps applications to access Bitbucket.</li>
 <li>Deploy an instance of Jenkins.</li>
+<li>Give the Jenkins service account the <code>system:image-puller</code> role in the defined centralised resource namespace so that it can access the Subatomic Jenkins agent images.</li>
 <li>Load in all the credentials required by Jenkins. More information on these credentials can be found <a href="#sub-create-jenkins-default-credentials">here</a></li>
 </ol>
 <hr />
