@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
@@ -529,8 +529,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-create-jenkins-bitbucket-credentials" title="sub create jenkins bitbucket credentials" class="md-nav__link">
-    sub create jenkins bitbucket credentials
+  <a href="#sub-create-jenkins-default-credentials" title="sub create jenkins default credentials" class="md-nav__link">
+    sub create jenkins default credentials
   </a>
   
 </li>
@@ -627,8 +627,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-patch-s2i-image" title="sub patch s2i image" class="md-nav__link">
-    sub patch s2i image
+  <a href="#sub-patch-package-s2i-image" title="sub patch package s2i image" class="md-nav__link">
+    sub patch package s2i image
   </a>
   
 </li>
@@ -678,20 +678,6 @@
           <li class="md-nav__item">
   <a href="#sub-request-project-prod" title="sub request project prod" class="md-nav__link">
     sub request project prod
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-tag-all-images" title="sub tag all images" class="md-nav__link">
-    sub tag all images
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-tag-image" title="sub tag image" class="md-nav__link">
-    sub tag image
   </a>
   
 </li>
@@ -904,8 +890,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-create-jenkins-bitbucket-credentials" title="sub create jenkins bitbucket credentials" class="md-nav__link">
-    sub create jenkins bitbucket credentials
+  <a href="#sub-create-jenkins-default-credentials" title="sub create jenkins default credentials" class="md-nav__link">
+    sub create jenkins default credentials
   </a>
   
 </li>
@@ -1002,8 +988,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-patch-s2i-image" title="sub patch s2i image" class="md-nav__link">
-    sub patch s2i image
+  <a href="#sub-patch-package-s2i-image" title="sub patch package s2i image" class="md-nav__link">
+    sub patch package s2i image
   </a>
   
 </li>
@@ -1058,20 +1044,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-tag-all-images" title="sub tag all images" class="md-nav__link">
-    sub tag all images
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-tag-image" title="sub tag image" class="md-nav__link">
-    sub tag image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sub-team-migrate-cloud" title="sub team migrate cloud" class="md-nav__link">
     sub team migrate cloud
   </a>
@@ -1115,7 +1087,7 @@
 <p>Jenkins commands that allow the user to control builds and Jenkins configuration</p>
 <ol>
 <li><a href="#sub-configure-application-jenkins-prod"><code>sub configure application jenkins prod</code></a> - Add a prod deployment job to Jenkins for an application</li>
-<li><a href="#sub-create-jenkins-bitbucket-credentials"><code>sub create jenkins bitbucket credentials</code></a> - Recreate the Jenkins Bitbucket Credentials</li>
+<li><a href="#sub-create-jenkins-default-credentials"><code>sub create jenkins default credentials</code></a> - Recreate the Jenkins default credentials</li>
 <li><a href="#sub-jenkins-build"><code>sub jenkins build</code></a> - Kick off a Jenkins build</li>
 <li><a href="#sub-project-request-jenkins-job"><code>sub project request jenkins job</code></a> - Creates a Jenkins build folder for a given project</li>
 </ol>
@@ -1169,8 +1141,6 @@
 <li><a href="#sub-request-devops-environment"><code>sub request devops environment</code></a> - Create a DevOps environment for a selected Team.</li>
 <li><a href="#sub-create-team-channel"><code>sub create team channel</code></a> - This will create a public slack channel, if you want a private channel you will need to create it manually then run <a href="#sub-link-team-channel"><code>sub link team channel</code></a> command.</li>
 <li><a href="#sub-remove-team-member"><code>sub remove team member</code></a> - Removes a member from a team.</li>
-<li><a href="#sub-tag-all-images"><code>sub tag all images</code></a> - Tag all latest subatomic images to a DevOps environment</li>
-<li><a href="#sub-tag-image"><code>sub tag image</code></a> - Tag an individual subatomic image to a DevOps environment</li>
 </ol>
 <h3 id="other-commands"><strong>Other Commands</strong></h3>
 <p>All other general/miscellaneous commands</p>
@@ -1295,8 +1265,16 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <li>Give Team members write permissions.</li>
 </ol>
 <hr />
-<h4 id="sub-create-jenkins-bitbucket-credentials"><code>sub create jenkins bitbucket credentials</code></h4>
-<p>This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket and clone sources used in builds. This should only need to be run if the Service Account credentials have changed.</p>
+<h4 id="sub-create-jenkins-default-credentials"><code>sub create jenkins default credentials</code></h4>
+<p>This will recreate the default credentials used by Jenkins. This can be run if the Bitbucket Service Account credentials have changed or if the Jenkins credentials are generally out of date. In particular this creates the following credentials:</p>
+<ol>
+<li>Bitbucket Credentials - Used to access Bitbucket.</li>
+<li>Nexus - Stores the URL of the Nexus instance to use for builds.</li>
+<li>Docker - Stores the Docker registry url used to specify locations of images that Jenkins uses (e.g. Jenkins agent images)</li>
+<li>Shared Resources Namespace - Stores the name of the Subatomic shared resource OpenShift namespace. This is used to know which namespace to look for centralised images in.</li>
+<li>Maven - This is the default Maven settings used in Maven builds.</li>
+<li>Production Access Tokens - This is the service account tokens used to access production environments. These are only created if a project associated to the team has been promoted to prod.</li>
+</ol>
 <hr />
 <h4 id="sub-create-openshift-pvc"><code>sub create openshift pvc</code></h4>
 <p>This command can be used to either add a PersistentVolumeClaim to a particular environment, or to every environment in a Project pipeline based on user selection.</p>
@@ -1348,8 +1326,8 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <h4 id="sub-onboard-me"><code>sub onboard me</code></h4>
 <p>This is the first command any user should run. Without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your <code>first name</code>, <code>last name</code>, <code>email address</code> and <code>domain username</code>. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click <a href="../../user-guide/onboarding/">here</a>.</p>
 <hr />
-<h4 id="sub-patch-s2i-image"><code>sub patch s2i image</code></h4>
-<p>This looks up the latest versions of s2i ImageStream's available, tags a selected one to your Team DevOps environment, and changes a selected Application's BuildConfig to use updated ImageStream.</p>
+<h4 id="sub-patch-package-s2i-image"><code>sub patch package s2i image</code></h4>
+<p>This looks up the latest versions of s2i ImageStream's available in the centralised resources namespace, and changes a selected Application's BuildConfig to use the updated ImageStream.</p>
 <hr />
 <h4 id="sub-project-request-jenkins-job"><code>sub project request jenkins job</code></h4>
 <p>This requests a build folder for a specific project be created. This can either be useful if the build folder is deleted, or a user wants to create builds for a project without creating the OpenShift environments. The use case for the latter being when a Project only contains libraries and no deployable applications. This performs the following operations:</p>
@@ -1384,9 +1362,9 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 <li>Apply the system admin set default OpenShift Limits and Quota's to the new namespace.</li>
 <li>Give all Team members write permissions to the DevOps namespace.</li>
 <li>Give all Team owners admin permissions to the DevOps namespace.</li>
-<li>Copy all Subatomic application templates to the DevOps namespace from the Subatomic namespace.</li>
-<li>Tag all Subatomic S2I, Jenkins, and config server ImageStreams to the DevOps namespace from the Subatomic namespace.</li>
 <li>Create a secret <code>bitbucket-ssh</code> which contains the credentials required by the shared DevOps applications to access Bitbucket.</li>
+<li>Deploy an instance of Jenkins.</li>
+<li>Load in all the credentials required by Jenkins. More information on these credentials can be found <a href="#sub-create-jenkins-default-credentials">here</a></li>
 </ol>
 <hr />
 <h4 id="sub-request-generic-prod"><code>sub request generic prod</code></h4>
@@ -1425,12 +1403,6 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
 </li>
 </ol>
 <p>Once a Project pipeline has been moved to production then the Applications within the Project can be setup to move into production. For more information on this look at <a href="#sub-request-generic-prod"><code>sub request generic prod</code></a> and <a href="#sub-request-application-prod"><code>sub request application prod</code></a>.</p>
-<hr />
-<h4 id="sub-tag-all-images"><code>sub tag all images</code></h4>
-<p>This command tags all the latest version of the S2I, Jenkins, and Config Server ImageStreams to a Team's DevOps environment from the Subatomic namespace.</p>
-<hr />
-<h4 id="sub-tag-image"><code>sub tag image</code></h4>
-<p>This command tags latest version of a particular ImageStream to a Team's DevOps environment from the Subatomic namespace.</p>
 <hr />
 <h4 id="sub-team-migrate-cloud"><code>sub team migrate cloud</code></h4>
 <p>When a Team in Subatomic is created, it is associated to a particular "cloud". A cloud represents a group of OpenShift clusters that are grouped into a non prod cluster, and multiple production clusters. Provided that the Subatomic deployment has been configured to use multiple "clouds", this command can be used to migrate a Team and all associated Projects from one cloud to another cloud. The steps in this operation are as follows:</p>
@@ -1520,7 +1492,7 @@ This command is used to create just the Jenkins jobs for deploying an applicatio
       
     </div>
     
-      <script src="../../assets/javascripts/application.b806dc00.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
