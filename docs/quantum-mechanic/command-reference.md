@@ -13,7 +13,7 @@ Bitbucket commands that control Bitbucket project configuration and access contr
 Jenkins commands that allow the user to control builds and Jenkins configuration
 
 1. [`sub configure application jenkins prod`](#sub-configure-application-jenkins-prod) - Add a prod deployment job to Jenkins for an application
-2. [`sub create jenkins bitbucket credentials`](#sub-create-jenkins-bitbucket-credentials) - Recreate the Jenkins Bitbucket Credentials
+2. [`sub create jenkins default credentials`](#sub-create-jenkins-default-credentials) - Recreate the Jenkins default credentials
 3. [`sub jenkins build`](#sub-jenkins-build) - Kick off a Jenkins build
 4. [`sub project request jenkins job`](#sub-project-request-jenkins-job) - Creates a Jenkins build folder for a given project
 
@@ -68,8 +68,6 @@ Team commands allow you to manage your Subatomic team. These include team member
 10. [`sub request devops environment`](#sub-request-devops-environment) - Create a DevOps environment for a selected Team.
 11. [`sub create team channel`](#sub-create-team-channel) - This will create a public slack channel, if you want a private channel you will need to create it manually then run [`sub link team channel`](#sub-link-team-channel) command.
 12. [`sub remove team member`](#sub-remove-team-member) - Removes a member from a team.
-13. [`sub tag all images`](#sub-tag-all-images) - Tag all latest subatomic images to a DevOps environment
-14. [`sub tag image`](#sub-tag-image) - Tag an individual subatomic image to a DevOps environment
 
 ###  **Other Commands**
 All other general/miscellaneous commands
@@ -193,8 +191,15 @@ This command is used to assign the necessary permissions to a Project's associat
 3. Give Team members write permissions.
 
 ---
-#### `sub create jenkins bitbucket credentials`
-This will recreate the Bitbucket credentials used by Jenkins to access Bitbucket and clone sources used in builds. This should only need to be run if the Service Account credentials have changed.
+#### `sub create jenkins default credentials`
+This will recreate the default credentials used by Jenkins. This can be run if the Bitbucket Service Account credentials have changed or if the Jenkins credentials are generally out of date. In particular this creates the following credentials:
+
+1. Bitbucket Credentials - Used to access Bitbucket.
+2. Nexus - Stores the URL of the Nexus instance to use for builds.
+3. Docker - Stores the Docker registry url used to specify locations of images that Jenkins uses (e.g. Jenkins agent images)
+4. Shared Resources Namespace - Stores the name of the Subatomic shared resource OpenShift namespace. This is used to know which namespace to look for centralised images in.
+5. Maven - This is the default Maven settings used in Maven builds.
+6. Production Access Tokens - This is the service account tokens used to access production environments. These are only created if a project associated to the team has been promoted to prod.
 
 ---
 #### `sub create openshift pvc` 
@@ -262,8 +267,8 @@ This will present a list of the Team owners and users. This is useful to know wh
 This is the first command any user should run. Without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your `first name`, `last name`, `email address` and `domain username`. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click [here](../user-guide/onboarding.md).
 
 ---
-#### `sub patch s2i image`
-This looks up the latest versions of s2i ImageStream's available, tags a selected one to your Team DevOps environment, and changes a selected Application's BuildConfig to use updated ImageStream.
+#### `sub patch package s2i image`
+This looks up the latest versions of s2i ImageStream's available in the centralised resources namespace, and changes a selected Application's BuildConfig to use the updated ImageStream.
 
 ---
 #### `sub project request jenkins job`
@@ -300,9 +305,9 @@ A DevOps environment is an OpenShift namespace which acts as a shared environmen
 2. Apply the system admin set default OpenShift Limits and Quota's to the new namespace.
 3. Give all Team members write permissions to the DevOps namespace.
 4. Give all Team owners admin permissions to the DevOps namespace.
-5. Copy all Subatomic application templates to the DevOps namespace from the Subatomic namespace.
-6. Tag all Subatomic S2I, Jenkins, and config server ImageStreams to the DevOps namespace from the Subatomic namespace.
-7. Create a secret `bitbucket-ssh` which contains the credentials required by the shared DevOps applications to access Bitbucket.
+5. Create a secret `bitbucket-ssh` which contains the credentials required by the shared DevOps applications to access Bitbucket.
+6. Deploy an instance of Jenkins.
+7. Load in all the credentials required by Jenkins. More information on these credentials can be found [here](#sub-create-jenkins-default-credentials)
 
 ---
 #### `sub request generic prod` 
@@ -334,14 +339,6 @@ In order to promote Applications to production, you need to have production envi
     3. A pod network is setup so that the Applications in the production Project environments can communicate with the DevOps environment services.
 
 Once a Project pipeline has been moved to production then the Applications within the Project can be setup to move into production. For more information on this look at [`sub request generic prod`](#sub-request-generic-prod) and [`sub request application prod`](#sub-request-application-prod).
-
----
-#### `sub tag all images` 
-This command tags all the latest version of the S2I, Jenkins, and Config Server ImageStreams to a Team's DevOps environment from the Subatomic namespace.
-
----
-#### `sub tag image` 
-This command tags latest version of a particular ImageStream to a Team's DevOps environment from the Subatomic namespace.
 
 ---
 #### `sub team migrate cloud` 
