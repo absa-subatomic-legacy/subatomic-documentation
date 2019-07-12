@@ -23,6 +23,7 @@ Member commands allow you to manage Subatomic members. These include editing Sla
 1. [`sub add team member`](#sub-add-team-member) - Add a member to a team
 2. [`sub add team owner`](#sub-add-team-owner) - Add a member as an owner to a team
 3. [`sub onboard me`](#sub-onboard-me) - The most important command, without on-boarding yourself you will not be able to run any subatomic commands. You will need to input your `first name`, `last name`, `email address` and `domain username`. Once submitted you will be able to execute subatomic commands granted you have the permission to execute them. For a detailed walk through click [here](../user-guide/onboarding.md).
+4. [`sub update slack details`](#sub-update-slack-details) - Synchronizes a user's Slack details with the Subatomic user details.
 
 
 ###  **Package Commands**
@@ -344,3 +345,7 @@ When a Team in Subatomic is created, it is associated to a particular "cloud". A
 2. Recreate all OpenShift namespaces from all Projects associated to the Team being migrated.
 3. Copy all OpenShift resources from the original environments to the newly created OpenShift environments. This includes DeploymentConfig, Service, Route, PersistentVolumeClaim, and ImageStream resources.
 4. Recreate the Jenkins build jobs for each Application associated to the Project.
+
+---
+#### `sub update slack details` 
+Synchronizes a user's Slack details with the Subatomic user details.
